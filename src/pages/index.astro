@@ -1,0 +1,83 @@
+---
+import Card from "../components/Card.astro"
+import Layout from "../layouts/Layout.astro"
+
+const projects = [
+	{
+		image: "VICIO.PNG",
+		href: "vicio",
+		alt: "Proyecto Vicio",
+	},
+	{
+		image: "SIN_NIEVE.PNG",
+		href: "sin-nieve",
+		alt: "Proyecto Sin Nieve",
+	},
+	{
+		image: "RESACA.PNG",
+		href: "resaca",
+		alt: "Proyecto Resaca",
+	},
+	{
+		image: "SPOTIFY.PNG",
+		href: "spotify",
+		alt: "Proyecto Spotify",
+	},
+	{
+		image: "ZALANDO.PNG",
+		href: "zalando",
+		alt: "Proyecto Zalando",
+	},
+	{
+		image: "NIKE.PNG",
+		href: "nike",
+		alt: "Proyecto Nike",
+	},
+	{
+		image: "AUDIBLE.PNG",
+		href: "audible",
+		alt: "Proyecto Audible",
+	},
+	{
+		image: "DUREX.PNG",
+		href: "durex",
+		alt: "Proyecto Durex",
+	},
+	{
+		image: "PLAN_FAMILIAR.PNG",
+		href: "plan-familiar",
+		alt: "Proyecto Plan Familiar",
+	},
+	{
+		image: "FAMILIAR_VOICES.PNG",
+		href: "familiar-voices",
+		alt: "Proyecto Familiar Voices",
+	},
+	{
+		image: "GIFFGAFF.PNG",
+		href: "giffgaff",
+		alt: "Proyecto Giffgaff",
+	},
+]
+---
+
+<Layout title="Carmen Puche" description="Portafolio de Carmen Puche. Creativa" isMainPage={true}>
+	<main class="mx-auto max-w-screen-xl px-4">
+		<section
+			aria-label="Proyectos"
+			class="grid gap-x-6 gap-y-4 xxs:grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
+		>
+			{
+				projects.map((project) => (
+					<Card image={project.image} href={project.href} alt={project.alt} />
+				))
+			}
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		padding-top: 172px; /* Ajusta este valor según sea necesario para el espacio debajo del navbar */
+	}
+</style>
