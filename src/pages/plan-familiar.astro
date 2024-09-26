@@ -1,5 +1,7 @@
 ---
+
 import Layout from "../layouts/Layout.astro";
+import { fade } from "astro:transitions";
 
 const cabecera = {
   src: "https://s3-alpha-sig.figma.com/img/1635/d9d2/aed9e9a804b83724dc1ac9f5b071a17f?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NLt2slyKJ9Ah608Zfc6spePfULMKWl-WWByuuXz26LC6rjWYWzQ2gf1zjB1d6Eq2919hoTmB-~tiqy7a8XOo5ESeVR5t4jlC4erI5AkFONStTAbkvBLTxXRdHvEsUkCyKITgWozYWmqr6XmFpoLsXALA2yS9t5943eyNjpHa9GQ6mgKsmvh2oCfvvKwcOvTTBNhyibqey-cotxInSSSbdnqn1~Qi~Taxk-NtHsew~9TCXUtwzHtqkhnNVPaDsNnS7L1Crp6mDBV7agsGmuCfhbTAZv~gzspo5MO3IAKC4JEfT2wjNF9It1nssdhwlEGyj9tXNKN6b7IJUOyuih7Msg__",
@@ -19,24 +21,44 @@ const frases = {
 };
 ---
 
-<Layout
-  title="Plan familiar"
-  description="El plan familiar son los padres"
->
-  <main class="bg-black">
+<Layout title="Plan familiar" description="El plan familiar son los padres">
+  <main
+    transition:name={`image-plan-familiar`}
+    transition:animate={fade({ duration: "0.6s" })}
+  >
     <section class="image-section">
-      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+      <img
+        src={cabecera.src}
+        alt={cabecera.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
     <section class="image-section">
-      <img src={mockup.src} alt={mockup.alt} class="full-width-image" />
+      <img
+        src={mockup.src}
+        alt={mockup.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="image-section">
-      <img src={frases.src} alt={frases.alt} class="full-width-image" />
+      <img
+        src={frases.src}
+        alt={frases.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="image-section">
-      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+      <img
+        src={footer.src}
+        alt={footer.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
   </main>
 </Layout>
@@ -44,7 +66,6 @@ const frases = {
 <style>
   main {
     width: 100%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;

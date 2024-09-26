@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { fade } from "astro:transitions";
 
 const cabecera = {
   src: "https://s3-alpha-sig.figma.com/img/6fe0/7571/2c385bb7d0131c177fcd37857fc27bb3?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MuYVwIZhbMJokMXau2HgHhRqgowkmlWtV86TXxtWpPThW~g8I10qFEsjd7LDSFkZB0AQdkpArP8jwATi7oIKOPq61N7mo0w19~Vq5V85OYM0kdGHGaxU1G4cEpcT5CeO4gT7aUzoDAQlfyJSQib6XCUGaSnvEzsXPJNZ-npslmrWE8psAKyePVcHR-~usNg7eVvY2AWoAGbQPjvovUy5ccAeunvT5MlyD4oC~oBdGQaJiCMiohFa51~ZwOSeUnFGc-ZC-9JBxm~5SGADQKkqyhXOrAJ~BA4nDZg8gy-zUoHVQtJMQ6OPXLr2oSrB6H1VtG9EMyuuNAkj64pwUOomLA__",
@@ -41,9 +42,17 @@ const videoSrc2 =
   title="Sin Nieve no hay sociedad"
   description="Los Andes se derriten un 10% cada diez años y, para reivindicarlo, aprovechamos que todo el mundo habla de la película del momento: 'La sociedad de la nieve'."
 >
-  <main class="bg-black">
+  <main
+    transition:name={`image-sin-nieve`}
+    transition:animate={fade({ duration: "0.6s" })}
+  >
     <section class="image-section">
-      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+      <img
+        src={cabecera.src}
+        alt={cabecera.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="video-section">
@@ -69,19 +78,41 @@ const videoSrc2 =
     </section>
 
     <section class="image-section">
-      <img src={logos.src} alt={logos.alt} class="full-width-image" />
+      <img
+        src={logos.src}
+        alt={logos.alt}
+        class="full-width-image"
+        loading="lazy"
+        transition:name={`image-sin-nieve`}
+        transition:animate={fade({ duration: "0.6s" })}
+      />
     </section>
 
     <section class="image-section">
-      <img src={insta.src} alt={insta.alt} class="full-width-image" />
+      <img
+        src={insta.src}
+        alt={insta.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="image-section">
-      <img src={carteles.src} alt={carteles.alt} class="full-width-image" />
+      <img
+        src={carteles.src}
+        alt={carteles.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="image-section">
-      <img src={historias.src} alt={historias.alt} class="full-width-image" />
+      <img
+        src={historias.src}
+        alt={historias.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="image-section">
@@ -89,11 +120,17 @@ const videoSrc2 =
         src={comentarios.src}
         alt={comentarios.alt}
         class="full-width-image"
+        loading="lazy"
       />
     </section>
 
     <section class="image-section">
-      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+      <img
+        src={footer.src}
+        alt={footer.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
   </main>
 </Layout>
@@ -101,7 +138,6 @@ const videoSrc2 =
 <style>
   main {
     width: 100%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;

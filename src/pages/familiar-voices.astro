@@ -1,5 +1,7 @@
 ---
+
 import Layout from "../layouts/Layout.astro";
+import { fade } from 'astro:transitions';
 
 const cabecera = {
   src: "https://s3-alpha-sig.figma.com/img/b4c6/b0f6/01404d06730e3d0cd0fc89480644711d?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=euuX0qCOa5JD6HAIKUtJOhffdJxvkkoYYeAUpsRC25jPRrFXRZUSHoTxwBtQG3Mjog4SW0UvWkheC3cCPIhHTNF4hn79M3o8KLfSRc7CS0569Qjnr1x0ejdJHDH10jOGaj1cY69qRs6FqLUxrHyYtfse6reaqzoFglS2oBjF8DPa7fGQg8HQmE5WvAYFwJyDyoVPqEuebNkGfZ2OP4pIRKjkeh0HHbmytCmV~Zj7MzyPv2efTS0MwqXWvQFrp485SnbJUknJsQSi27piTgMxwZhZU33Tu9If4XMNJYWUfRIG6DeWaNMbfAm3nzLhdbjhlyjGB6-h5dJUIVprtZh6Jw__",
@@ -26,13 +28,13 @@ const videoSrc =
   title="Familiar Voices"
   description="Conducir solo aumenta el riesgo de tener un accidente de tráfico. Pero tengo una solución"
 >
-  <main class="bg-black">
+  <main>
     <section class="image-section">
-      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" loading="lazy" transition:name={`image-familiar-voices`} transition:animate={fade({ duration: '0.6s' })} />
     </section>
 
     <section class="image-section">
-      <img src={siri.src} alt={siri.alt} class="full-width-image" />
+      <img src={siri.src} alt={siri.alt} class="full-width-image" loading="lazy" />
     </section>
 
     <section class="video-section">
@@ -46,11 +48,11 @@ const videoSrc =
       ></iframe>
     </section>
     <section class="image-section">
-      <img src={moviles.src} alt={moviles.alt} class="full-width-image" />
+      <img src={moviles.src} alt={moviles.alt} class="full-width-image" loading="lazy" />
     </section>
 
     <section class="image-section">
-      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+      <img src={footer.src} alt={footer.alt} class="full-width-image" loading="lazy" />
     </section>
   </main>
 </Layout>
@@ -58,7 +60,6 @@ const videoSrc =
 <style>
   main {
     width: 100%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;

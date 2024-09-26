@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { fade } from "astro:transitions";
 
 const basura = {
   src: "https://s3-alpha-sig.figma.com/img/3960/2f80/1b6e056ebe0ece2eec96f9b305cd24e0?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d8KrKYzjt~R-Nk5AqpkH4WWr895gJ4c-7-yakyAccdYYK9fv3uJqt5j9~jjmKWDauxNZ-rmMAPRa5IHb8wJeKEJoi-RPmRGIsLtrCtdx0j~OFLc8u9m3AQcJnIioXEEfQN69JWBZZUP6jldfjVDq8Nx1FaxjYrJBunfK0XcJG6xGPL4a8Wfpetsms4ExMFZFOY0a5SE3AWjsMVXkx-~4vBCiENqoIbHG8Eki3TZPyM11TtTGmU56I5TdEypG3LYjFEpe8rU3MM9JwsVEFVdFGl9l3Y9nYXyIR0uVRdID0uBzo2mL6OYE6gyQpKCmKmV36Ext1kqqIy-d2~UKOmU91g__",
@@ -38,9 +39,17 @@ const videoSrc =
   title="Vicio"
   description="Vicio quería comunicar que sus hamburguesas son de alta calidad pero no daban ninguna pista del porqué"
 >
-  <main class="bg-black">
+  <main
+    transition:name={`image-vicio`}
+    transition:animate={fade({ duration: "0.6s" })}
+  >
     <section class="image-section">
-      <img src={mosca.src} alt={mosca.alt} class="full-width-image" />
+      <img
+        src={mosca.src}
+        alt={mosca.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="video-section">
@@ -54,22 +63,52 @@ const videoSrc =
       ></iframe>
     </section>
     <section class="image-section">
-      <img src={texto1.src} alt={texto1.alt} class="full-width-image" />
+      <img
+        src={texto1.src}
+        alt={texto1.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
     <section class="image-section">
-      <img src={texto2.src} alt={texto2.alt} class="full-width-image" />
+      <img
+        src={texto2.src}
+        alt={texto2.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
     <section class="image-section">
-      <img src={basura.src} alt={basura.alt} class="full-width-image" />
+      <img
+        src={basura.src}
+        alt={basura.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
     <section class="image-section">
-      <img src={texto3.src} alt={texto3.alt} class="full-width-image" />
+      <img
+        src={texto3.src}
+        alt={texto3.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
     <section class="image-section">
-      <img src={contrato.src} alt={contrato.alt} class="full-width-image" />
+      <img
+        src={contrato.src}
+        alt={contrato.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
     <section class="image-section">
-      <img src={premio.src} alt={premio.alt} class="full-width-image" />
+      <img
+        src={premio.src}
+        alt={premio.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
   </main>
 </Layout>
@@ -77,7 +116,6 @@ const videoSrc =
 <style>
   main {
     width: 100%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,5 +1,7 @@
 ---
+
 import Layout from "../layouts/Layout.astro";
+import { fade } from "astro:transitions";
 
 const cabecera = {
   src: "https://s3-alpha-sig.figma.com/img/f59c/1bc0/162451a3218e73349f1bc6c7c5d80844?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X98hwH2aK9k2pIpRMdZIxB~sSn~yW3I~mMp-Q4KIwav4c5vXQplFjSmwCGtdFAPZ4cYNEMGxyhgxP4ldYPLdf3UejJLeuXonSehP0jL9ycWAOAyA-aHhgPf0HTyJRcHBYCzyIwU9-KA1t2oxB2gq5VJuWvgZuhIbh5QOcGW4XyvZ1eUZ8MqKuaQ9qGA~xF7Vx6I3ed4XakT~fRtwb2brN4H5RczKQA9VSHU0vY8e3ueKO9LtfKD-3n2dHtNy6Xi9984yZef39vIh1rorYhhdFdPEQTB0qBgiQYoYqp-jhOgx8VbKr4Dc-v~jd-MJafRc9oXCnypPWK5Co~RXpiNrbA__",
@@ -26,12 +28,25 @@ const videoSrc =
   title="Giffgaff"
   description="Giffgaff quería hacer una campaña de PR para dar a conocer sus móviles de segunda mano en Londres. Capitar europea de los robos de móviles"
 >
-  <main class="bg-black">
+  <main
+    transition:name={`image-giffgaff`}
+    transition:animate={fade({ duration: "0.6s" })}
+  >
     <section class="image-section">
-      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+      <img
+        src={cabecera.src}
+        alt={cabecera.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
     <section class="image-section">
-      <img src={racional.src} alt={racional.alt} class="full-width-image" />
+      <img
+        src={racional.src}
+        alt={racional.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
     <section class="video-section">
       <iframe
@@ -45,11 +60,21 @@ const videoSrc =
     </section>
 
     <section class="image-section">
-      <img src={bocetos.src} alt={bocetos.alt} class="full-width-image" />
+      <img
+        src={bocetos.src}
+        alt={bocetos.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="image-section">
-      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+      <img
+        src={footer.src}
+        alt={footer.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
   </main>
 </Layout>
@@ -57,7 +82,6 @@ const videoSrc =
 <style>
   main {
     width: 100%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
