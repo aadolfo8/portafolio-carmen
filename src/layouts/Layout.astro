@@ -1,0 +1,81 @@
+---
+import NavBar from "../components/NavBar.astro";
+
+interface Props {
+  title: string;
+  isMainPage: boolean;
+  description: string;
+}
+
+const { title, isMainPage, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+
+    <meta name="keywords" content="diseño, portafolio, publicidad, carmen" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:site_name" content="Carmen Puche" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+  </head>
+  <body>
+    <NavBar isMainPage={isMainPage} />
+    <div class="]">
+      <div
+        class="selection:bg-primary selection:text-secondary pt-[172px mx-auto min-h-screen max-w-6xl px-2 lg:px-10"
+        id="main-content"
+      >
+        <slot />
+      </div>
+    </div>
+  </body>
+  <style is:global>
+    :root {
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: "Raleway", system-ui, sans-serif;
+      background: #ffffff;
+    }
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  </style>
+</html>

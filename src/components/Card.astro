@@ -1,0 +1,28 @@
+---
+interface Props {
+	image: string
+	href: string
+	alt: string
+}
+
+const { image, href, alt } = Astro.props
+---
+
+<a
+	href={href}
+	class="card block aspect-square overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-lg"
+>
+	<img src={`/public/main/${image}`} alt={alt} class="h-full w-full object-cover" />
+</a>
+
+<style>
+	.card {
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+	}
+	.card:hover {
+		transform: scale(1.05);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	}
+</style>
