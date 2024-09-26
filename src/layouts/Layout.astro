@@ -1,9 +1,9 @@
 ---
 import NavBar from "../components/NavBar.astro";
-
+import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
- 
+
   description: string;
 }
 
@@ -13,10 +13,13 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <ViewTransitions />
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,15 +43,14 @@ const { title, description } = Astro.props;
     <meta name="googlebot" content="index, follow" />
   </head>
   <body>
-    <NavBar  />
-      <div
-        class="selection:bg-primary selection:text-secondary  min-h-screen w-full "
-        id="main-content"
-      >
-        <slot />
-      </div>
-  </body>
-  <style is:global>
+    <NavBar />
+    <div
+      class="selection:bg-primary selection:text-secondary min-h-screen w-full"
+      id="main-content"
+    >
+      <slot />
+    </div>
+  </body><style is:global>
     :root {
       --accent: 136, 58, 234;
       --accent-light: 224, 204, 250;
@@ -64,32 +66,31 @@ const { title, description } = Astro.props;
       font-family: "Raleway", system-ui, sans-serif;
       background: #ffffff;
     }
-   
 
     .image-section,
-  .video-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .full-width-image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .full-width-video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: none;
-  }
-
-  @media (max-width: 768px) {
-    .full-width-video {
-      height: 56.25vw; /* 16:9 Aspect Ratio */
+    .video-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-  }
+
+    .full-width-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .full-width-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .full-width-video {
+        height: 56.25vw; /* 16:9 Aspect Ratio */
+      }
+    }
   </style>
 </html>

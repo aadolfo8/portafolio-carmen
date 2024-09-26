@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { fade } from "astro:transitions";
 
 const cabecera = {
   src: "https://s3-alpha-sig.figma.com/img/0077/0d1d/87200662d95f64f71c689871d9d1c9e0?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JpQ3VXeBnRLozGovkTXV~CDm-edbHFWI7t9MMw7GTyqOjyqJQNPO6cKEsFzX4kLflkJAQb22~lfDAmHIMn~ngjJETPI7hx-cwYIuff~LfWl4XNy~YsIKWIdrsb97sW5LWvKy4HOGhgrA2W-HLw2KB4UFqTiX~y5DaauI3gLBl2Wen4vRAUY92I0bBgU380Cr1beHjoVBx8Xz8KIfVQGwu45mACwvN5voMGw7PmyMRapN6E2s-QhLHEHV6sKPyA86v0j7uAiSUwrOo5iGyHjyEnZuRAlbZ~3gYeGsd2UI8RQBafyhoCf43WGL7oM60G16RdEUH6pMrGK-gf~fH1BE-A__",
@@ -23,9 +24,17 @@ const videoSrc =
 ---
 
 <Layout title="Spotify" description="VPN Spotify">
-  <main class="bg-black">
+  <main
+    transition:name={`image-spotify`}
+    transition:animate={fade({ duration: "0.6s" })}
+  >
     <section class="image-section">
-      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+      <img
+        src={cabecera.src}
+        alt={cabecera.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="video-section">
@@ -39,15 +48,30 @@ const videoSrc =
       ></iframe>
     </section>
     <section class="image-section">
-      <img src={moviles.src} alt={moviles.alt} class="full-width-image" />
+      <img
+        src={moviles.src}
+        alt={moviles.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="image-section">
-      <img src={mapas.src} alt={mapas.alt} class="full-width-image" />
+      <img
+        src={mapas.src}
+        alt={mapas.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="image-section">
-      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+      <img
+        src={footer.src}
+        alt={footer.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
   </main>
 </Layout>
@@ -55,7 +79,6 @@ const videoSrc =
 <style>
   main {
     width: 100%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { fade } from "astro:transitions";
 
 const cabecera = {
   src: "https://s3-alpha-sig.figma.com/img/e223/bf66/cb0e8e7984e6458e06dc7fe791525a67?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VqWcc~qV3iEblbPrSQmukwG76h5a12Nyw3WNHLWBt6KqFwmR4CMD9FUjU3QlHE6XAenm0YR-K00gp9k67qqS5j2vU45mMaaEFwsjxMw34rN3kS6kdFA74jplPbySPu3y5Q54OMfgB3PWN9ewEX5Wy2k4iqJEB5Zhuf9BDSQu9s5tZIOtXSIt-PED-cwlqNCGSDBLq6N6Qaqnk8hWUlIOGDxKBa3PHsiBdOHvz4MqH~VcNlKyzXi3V7dH-eUG7ik7oREuAqV4xGzdAuZz5rJjJ2pipEgsNTW4BgsCt4kJOHcFfcP9dypC-Qs6ZL1xQHVdq-ZDfSnnB2e0J7qZptGd9A__",
@@ -22,13 +23,26 @@ const videoSrc =
   title="Resaca"
   description="Nosotras nos lo tomamos al pie de la letra, borramos la resaca del mapa, literalmente"
 >
-  <main class="bg-black">
+  <main
+    transition:name={`image-resaca`}
+    transition:animate={fade({ duration: "0.6s" })}
+  >
     <section class="image-section">
-      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+      <img
+        src={cabecera.src}
+        alt={cabecera.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
 
     <section class="image-section">
-      <img src={boton.src} alt={boton.alt} class="full-width-image" />
+      <img
+        src={boton.src}
+        alt={boton.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
     <section class="video-section">
       <iframe
@@ -42,7 +56,12 @@ const videoSrc =
     </section>
 
     <section class="image-section">
-      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+      <img
+        src={footer.src}
+        alt={footer.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
     </section>
   </main>
 </Layout>
@@ -50,7 +69,6 @@ const videoSrc =
 <style>
   main {
     width: 100%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
