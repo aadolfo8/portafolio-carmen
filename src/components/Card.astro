@@ -10,9 +10,11 @@ const { image, href, alt } = Astro.props
 
 <a
 	href={href}
-	class="card block aspect-square overflow-hidden transition-transform duration-300 ease-in-out hover:shadow-lg"
+	class="card block w-full h-full transition-transform duration-300 ease-in-out hover:shadow-lg"
 >
-	<img src={`/public/main/${image}`} alt={alt} class="h-full w-full object-cover" />
+	<div class="image-container">
+		<img src={`/public/main/${image}`} alt={alt} class="w-full h-full object-contain" />
+	</div>
 </a>
 
 <style>
@@ -24,5 +26,16 @@ const { image, href, alt } = Astro.props
 	.card:hover {
 		transform: scale(1.05);
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	}
+	.image-container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.image-container img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
 	}
 </style>

@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const cabecera = {
+  src: "https://s3-alpha-sig.figma.com/img/0077/0d1d/87200662d95f64f71c689871d9d1c9e0?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JpQ3VXeBnRLozGovkTXV~CDm-edbHFWI7t9MMw7GTyqOjyqJQNPO6cKEsFzX4kLflkJAQb22~lfDAmHIMn~ngjJETPI7hx-cwYIuff~LfWl4XNy~YsIKWIdrsb97sW5LWvKy4HOGhgrA2W-HLw2KB4UFqTiX~y5DaauI3gLBl2Wen4vRAUY92I0bBgU380Cr1beHjoVBx8Xz8KIfVQGwu45mACwvN5voMGw7PmyMRapN6E2s-QhLHEHV6sKPyA86v0j7uAiSUwrOo5iGyHjyEnZuRAlbZ~3gYeGsd2UI8RQBafyhoCf43WGL7oM60G16RdEUH6pMrGK-gf~fH1BE-A__",
+  alt: "Cabecera",
+};
+const mapas = {
+  src: "https://s3-alpha-sig.figma.com/img/632e/0113/3b52acaad008079e9196456890d1c20a?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SxSbZ16hKgDoc4DO0iQ2OBAErUJQ4BiD~yrPs6uO7i3GBq9ZHOflSrMHO~moFeeIL00PIZQf7pxkgFhIh9kaHu0bhKIibZEKhJXMATggdnXPy2W3aMKOOUB~g-OTCgpiIui13ftu3tEIU0~jq~O1sxAiy3AjSl9J-2FhhXbqs6aTMR9CO3jaeYBceSbuXqA76~rLcixQlAOwKtUvo9VXyGKwmwp49BERrZiNf6PzlpIqwac-w442OCW47vTYIEriswyIcRr4UUggafptuCenRFjtgzQeWZjl66ixUS1YoXK2T8E8Z7mi29SLVxa9BF6YHj27JlVwSmFU8n47cENEBw__",
+  alt: "Mapas",
+};
+const footer = {
+  src: "https://s3-alpha-sig.figma.com/img/b42c/c336/700ed62f78ebe58a039ea7aedab4ae4a?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RIiWWzbmLxF1yizrZ4079H8vfCNiD0MudbPA1JQlOZqV2xdCSHLq71ad107o3TSzNIMIA2GSEQ1xacd~i-jeM3l8ccf6Ah~GdbPbKDO9WkTaMUVPLQ5bUWutMwEa2AUAUBBzJ3xvwTJSED2~uGz9No1CIRA0vx1jpDG2YsjYRUOVc0qXENRxcl7E9KK~bW0GBgUxYa3fJanAh0BUbJJTGBkDY6mf44W~2SUM909MbKaagagNwVeeohTqK651PLxfKk~ORkdGuGp-ZWkobspJuozUkwRLVLyE2V1T~C4iWgt-wjC8glUZjvKArokC9VaNutbA1w0N54Xejxd45y14HQ__",
+  alt: "Footer",
+};
+const moviles = {
+  src: "https://s3-alpha-sig.figma.com/img/4d42/bee0/70e593841ec57aad9b8c80a29bdc1bed?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A7Sb7PFY29OLIBaVzZ1BGPc1s-hajAbRpsMxwa0xz3TooFFuDYgXH25zYV7lKNoOd-6-ydhxBV4l2WZOTYFjZq10B6lcpPwhk23LIYNrrJ5zzxXrBUnJGWh6ZUsVscrFZkISyzbP5mi53m3V-gxg5Z5zaY6lVTEhfuqXFeexHZ6dGO~f5VgCRqgo2ubxJXbYvhS8UdW1Ua4CTs8Y05Y-lzoIytx5W7NdOmP96V1j7ovwpaO5YEk~C4ByiiqJRCD2ZX9inHdDxeFH51JSuz4Cn60uzRUoKlPcfYSRc64ceouXHfLZw6C8Ie7HdDgAU0hlrwbfYljOnm5gWYKxNR-geg__",
+  alt: "Moviles",
+};
+
+const videoSrc =
+  "https://player.vimeo.com/video/936601328?h=12cb3368ef&amp;title=0&amp;byline=0&amp;portrait=0";
+---
+
+<Layout title="Spotify" description="VPN Spotify">
+  <main class="bg-black">
+    <section class="image-section">
+      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+    </section>
+
+    <section class="video-section">
+      <iframe
+        src={videoSrc}
+        title="Nike"
+        class="full-width-video"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"
+      ></iframe>
+    </section>
+    <section class="image-section">
+      <img src={moviles.src} alt={moviles.alt} class="full-width-image" />
+    </section>
+
+    <section class="image-section">
+      <img src={mapas.src} alt={mapas.alt} class="full-width-image" />
+    </section>
+
+    <section class="image-section">
+      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+  }
+</style>

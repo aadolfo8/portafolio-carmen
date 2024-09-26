@@ -3,11 +3,11 @@ import NavBar from "../components/NavBar.astro";
 
 interface Props {
   title: string;
-  isMainPage: boolean;
+ 
   description: string;
 }
 
-const { title, isMainPage, description } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -40,15 +40,13 @@ const { title, isMainPage, description } = Astro.props;
     <meta name="googlebot" content="index, follow" />
   </head>
   <body>
-    <NavBar isMainPage={isMainPage} />
-    <div class="]">
+    <NavBar  />
       <div
-        class="selection:bg-primary selection:text-secondary pt-[172px mx-auto min-h-screen max-w-6xl px-2 lg:px-10"
+        class="selection:bg-primary selection:text-secondary  min-h-screen w-full "
         id="main-content"
       >
         <slot />
       </div>
-    </div>
   </body>
   <style is:global>
     :root {
@@ -66,16 +64,32 @@ const { title, isMainPage, description } = Astro.props;
       font-family: "Raleway", system-ui, sans-serif;
       background: #ffffff;
     }
-    code {
-      font-family:
-        Menlo,
-        Monaco,
-        Lucida Console,
-        Liberation Mono,
-        DejaVu Sans Mono,
-        Bitstream Vera Sans Mono,
-        Courier New,
-        monospace;
+   
+
+    .image-section,
+  .video-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .full-width-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .full-width-video {
+      height: 56.25vw; /* 16:9 Aspect Ratio */
     }
+  }
   </style>
 </html>

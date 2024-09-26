@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const cabecera = {
+  src: "https://s3-alpha-sig.figma.com/img/b4c6/b0f6/01404d06730e3d0cd0fc89480644711d?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=euuX0qCOa5JD6HAIKUtJOhffdJxvkkoYYeAUpsRC25jPRrFXRZUSHoTxwBtQG3Mjog4SW0UvWkheC3cCPIhHTNF4hn79M3o8KLfSRc7CS0569Qjnr1x0ejdJHDH10jOGaj1cY69qRs6FqLUxrHyYtfse6reaqzoFglS2oBjF8DPa7fGQg8HQmE5WvAYFwJyDyoVPqEuebNkGfZ2OP4pIRKjkeh0HHbmytCmV~Zj7MzyPv2efTS0MwqXWvQFrp485SnbJUknJsQSi27piTgMxwZhZU33Tu9If4XMNJYWUfRIG6DeWaNMbfAm3nzLhdbjhlyjGB6-h5dJUIVprtZh6Jw__",
+  alt: "Cabecera",
+};
+const siri = {
+  src: "https://s3-alpha-sig.figma.com/img/96d0/63a4/6d91d8b6684feec2053e6f9cf0473c46?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NJPxiNdVeYQ6A33qHq0flP-i9HydUo3gRcphBYimDLPXf1Rzkpo1oAi0ouppzIiXJ34zyvqpZv6B6NkWYZT9dBIgm-~8FMOM5NVElvT~48Df-AEfFaRFRfW33gQ8D5-4CZxRbnYGqY20jYX2EQcM6PR65LxsMaFcRdwndYPvxcpteP2tdz43Q-S1eSkaDfMpidZgaXgyH8-kI1Aby14DPiZHQjCIMsj~Xg8BNEwrjtd6l5-s0xnEr64iDDmC8olxC8WDuf5QS5tWHsKlesFJ~5G6x9f9cqWinKpAEnqNVXPKXdF1pf8rWIlsvDBBtYvcpHk70hoxi67g-XJgRwlAEA__",
+  alt: "Siri",
+};
+const footer = {
+  src: "https://s3-alpha-sig.figma.com/img/4c0e/236a/adec9423066d9e352a2fa82e0d52e258?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ja7iEdmObGSA~eaEXc1GXBHlS2-HMZXduVm3l7mzyR3~N32wrZErQIeQk~6cbloziuzAvZaOr74tv~On~2Z6HAea-1f8HJXyieHLumr77BDMN-2~3qUjt2-WfjdXQOY4iF~ZzuIXxglNZTcFzRHNwIk0f4JctUHvYpVQumb0rtO-rGCOBAirRMk6Neyv4GyvuuMjQuRvdm56a91FLzgTLwp8GE~5X5X8krDYr3Jyoj4pageCVS8Gc6Qq1q~2fVqxUWz8Cx3wE~f7eAAg8ZN7oZ3iMgql~aLX7fdldk53K8rpGrKvOsTK7Vw4047Tl2eex1WR9WJDTb9jkD2XlzUWQw__",
+  alt: "Footer",
+};
+const moviles = {
+  src: "https://s3-alpha-sig.figma.com/img/28d9/588a/3c492a2af19470357d7bd6815ac2eb3c?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZTqvZ64TUWYSDDCnIZpCPh450kbdqtflkJsuQup3q1mBxphT32ZE8UrutNP0ryhhSlxUdrRcUJf5OVPLZqnaRdLLroB29Ey11e172IV3RNP9tR4i-qQMIzPL47eAcu9f0339sZaCccHUWQtQPIl1hIL63PCq3eHn5jQ5Q6SVnYxxglCr6hjAVCFfxTSB-dqEkyGsEE-Zdl8F-Nf7jfOfvG6BvFWgqMMGLEeMl9xaGuMhHhr6lQHF5D1lKaaWCzoDPtoB~Ll--6214pjc35eNgdxCDDlTRHHypfAwMs8Fj2m2YQIR9XZ6gNQESdbQ01zOvgV-NjnCntjPqBf-w67IZA__",
+  alt: "Moviles",
+};
+
+const videoSrc =
+  "https://player.vimeo.com/video/943601539?h=e94a00af9c&amp;title=0&amp;byline=0&amp;portrait=0";
+---
+
+<Layout
+  title="Familiar Voices"
+  description="Conducir solo aumenta el riesgo de tener un accidente de tráfico. Pero tengo una solución"
+>
+  <main class="bg-black">
+    <section class="image-section">
+      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+    </section>
+
+    <section class="image-section">
+      <img src={siri.src} alt={siri.alt} class="full-width-image" />
+    </section>
+
+    <section class="video-section">
+      <iframe
+        src={videoSrc}
+        title="Nike"
+        class="full-width-video"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"
+      ></iframe>
+    </section>
+    <section class="image-section">
+      <img src={moviles.src} alt={moviles.alt} class="full-width-image" />
+    </section>
+
+    <section class="image-section">
+      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+  }
+</style>

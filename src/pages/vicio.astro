@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const basura = {
+  src: "https://s3-alpha-sig.figma.com/img/3960/2f80/1b6e056ebe0ece2eec96f9b305cd24e0?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d8KrKYzjt~R-Nk5AqpkH4WWr895gJ4c-7-yakyAccdYYK9fv3uJqt5j9~jjmKWDauxNZ-rmMAPRa5IHb8wJeKEJoi-RPmRGIsLtrCtdx0j~OFLc8u9m3AQcJnIioXEEfQN69JWBZZUP6jldfjVDq8Nx1FaxjYrJBunfK0XcJG6xGPL4a8Wfpetsms4ExMFZFOY0a5SE3AWjsMVXkx-~4vBCiENqoIbHG8Eki3TZPyM11TtTGmU56I5TdEypG3LYjFEpe8rU3MM9JwsVEFVdFGl9l3Y9nYXyIR0uVRdID0uBzo2mL6OYE6gyQpKCmKmV36Ext1kqqIy-d2~UKOmU91g__",
+  alt: "Basura",
+};
+const texto1 = {
+  src: "https://s3-alpha-sig.figma.com/img/e96b/f2f2/dd9fbbedc8e0b174e1f47543ed6b4a4b?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RUbXUSW~M5J1GOW9eD69q1L43HcCu5ImgOz8a~VLtCkERVAlqz-NaY1CDOVTpTT-30g5sK5cFEWC6Rx~bKsaxO2RyApvgtlRHqHG6ocshLIDyxi-UrjcT-gBQQp1ucGn4h4NFBDGggTpeAhYDcBHCUL2JMjQzvFgnZQwaazd3DQTeyWiQKKnW~PEEhetQDpfPo~Qr0HaGR4c0M5ZfqAY4mTkVIj43R~fkIOzhHhI02zw5GLdp4WnTJykH56RhBBLJWpQZhv4EhzoAQa3WtRBgCdRj-d4-m2ER9W0IxTUdBLX4RoO0youNWmaUgLdVFv6z6nrGrBxFO0BqY-xL8pNRw__",
+  alt: "Texto1",
+};
+const texto2 = {
+  src: "https://s3-alpha-sig.figma.com/img/8ced/f1af/892186fb7a39ebfa4f6df4b826e604e1?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f5YLaAmB3UqXCNXzVQR9LiWwNZmjwE-j98lg9v5ExytZmOGu4jJyZ-n0kvwRQpLo1l9AUUOLHUq0PWXqyEEpYB5qcQZRm0sn3t-sX0pMJY0WKNpRVS4ODf4VnfIQ98cjiNeQe4uQtqVI1ivxS61Qgicwdi5cLVzj79rbm3u7X5uL95jXsyhEVdTN9SHzmZHfxhQ8HnFVEZD05sO-x05S~yuUbzyDKthSm0XhS7-iOROKCsuMYvTNnkbUa~RyvlF9YLNpCZwhkshpNIZ0iUsX5cAzSDfYPBaXBH5b5HaEIYmzCMLL8Y4~xUNa5Zy6rV-~iSEw-IiYJ0jYduB5GRn2Kw__",
+  alt: "Texto2",
+};
+const texto3 = {
+  src: "https://s3-alpha-sig.figma.com/img/55c6/508e/a1187a5789dfce544d147ecd66c9d48c?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W23Fb1KMT1jcOckzWgE1B7EhdVFl9cdmHcMW5LwiFVIbaXR27PGMu9iLCr5sDFWyrDQbdVQ-nZvzWibo0bHXIOjiwj96Gdt9fj2YX38f5vPW1vqI1L39-apObxlPItjnehXhuWpktoJLCiVGlyKRUrELJ2IxOMMxyaIxwBQTqvfJmHQxnw5SFrRyDnyHTdn6JNKawN0hMyHkiQrn9CzdIZbsowhJMB-qT2Rd3Gh99xV76UB3VKp8~V~egau2k1BJoxCMBEhymD1ENRFMMNpX6bb-flrND~Zx3DSJOEeWqmgJLLTbNNRLRnBfgefT96JwjXU8azr4Xbva7AK2u9YdRw__",
+  alt: "Texto3",
+};
+const premio = {
+  src: "https://s3-alpha-sig.figma.com/img/53d0/0d41/81853f58e14e0c009891216555cafec9?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OEEzaY8bQqroYwdv10IZOESJgjdpfpbbpVzz4flOjOeEMaQTparEw6y7iPpmqV51-UFws7PAOZe-hOtBvKVUMea6XeFx3UN-d-moa4eAlM0AodK31rsB73gVvjdkxi2tZpchHuFMiSLxYBM0pzkXUvPx90NPi2fNXg96TXujcugHKxfS5k-ItjK9jqxMRgNVc3elfVTGDFzNHSA3nbwGsPX12122d23l3AVmvpAXTzvWrEjyulZsx4JnAu-YUp9NTGatALwg5wS4t8HvO4KJEi~6gBSmEKpJabgs8hVMvRqvFQdxaljKmj46P0LdnYY63asS3JR8R9jl1h1GWmlSKw__",
+  alt: "Premio",
+};
+const contrato = {
+  src: "https://s3-alpha-sig.figma.com/img/e5f4/a443/6f7ca3134659dffbf87d7acc5c806509?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kzwqP2V23dooaqMjWk-Zqlo~Hemfi-rssiIwTTqaTXzHqlUpTJlXNHHJ8zV6Ejt8Orcs9Ki2F77G154NfF02nvSCDw2odhM1rxDTiGckHSA8pyEFB4OhYWjzVhrMIftAQHPMiOjUh5jaUfEyuYxKVs4EPnUxczjlp3rnq5PvhNp6Z1lwITl2MShOsGIIr1uKtlJ2n9C9FAqk5Wg3c1XZ0lN-zHBqtOzPKe2fTBt9MF09zQgIcb2WCoMxzG-63KXwAIKfdFX9JXm6e-2SIEtnjOtRjsAeCAGnL0hMDNgiUhJhaG~gYncjzEFEf61pkm~l2H2fNlN1v0FaeuWhzzrZJA__",
+  alt: "Contrato",
+};
+const mosca = {
+  src: "https://s3-alpha-sig.figma.com/img/9a82/4962/fd7b1935c1173c125bb2390b5da52864?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QtmHuHu1OA0mR4gQx1flBTQ6kzimC-k0eIkr0f5Frsjo-mWuvP-f-ZnEQqs3NTCUrR35SYvmrK7NyGGJwdgVXhJXAt71u7s5aZ7HHAUREvJYJRiU76E2MlrCoVz3bulW-s3WcvXzB~DmjMFqXiRAhHUbJk99g4HiLKJTkdysevqQZm6gR6uTuvXLnBtnCjQF8uwY2iGknSsoJ-KlVq-JTHUkmYJ8MlfCGuIZknWFkekL9Dua~N9AphnmmsQIyASuBqbyCbKWtdLDG2JZIoqX3DEjiK6pmJYqXTZ2-u~zlHGN7cmqlUe83blY3dX-5aSJkZ-6CCNKyxD~C7ufp4gmrA__",
+  alt: "Mosca",
+};
+
+const videoSrc =
+  "https://player.vimeo.com/video/934956545?h=02e8f4c91b&amp;title=0&amp;byline=0&amp;portrait=0";
+---
+
+<Layout
+  title="Vicio"
+  description="Vicio quería comunicar que sus hamburguesas son de alta calidad pero no daban ninguna pista del porqué"
+>
+  <main class="bg-black">
+    <section class="image-section">
+      <img src={mosca.src} alt={mosca.alt} class="full-width-image" />
+    </section>
+
+    <section class="video-section">
+      <iframe
+        src={videoSrc}
+        title="Nike"
+        class="full-width-video"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"
+      ></iframe>
+    </section>
+    <section class="image-section">
+      <img src={texto1.src} alt={texto1.alt} class="full-width-image" />
+    </section>
+    <section class="image-section">
+      <img src={texto2.src} alt={texto2.alt} class="full-width-image" />
+    </section>
+    <section class="image-section">
+      <img src={basura.src} alt={basura.alt} class="full-width-image" />
+    </section>
+    <section class="image-section">
+      <img src={texto3.src} alt={texto3.alt} class="full-width-image" />
+    </section>
+    <section class="image-section">
+      <img src={contrato.src} alt={contrato.alt} class="full-width-image" />
+    </section>
+    <section class="image-section">
+      <img src={premio.src} alt={premio.alt} class="full-width-image" />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+  }
+</style>

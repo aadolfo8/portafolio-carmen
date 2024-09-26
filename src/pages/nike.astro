@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const images = [
+  { src: "/public/nike/3 NIKE - MESSI.png", alt: "Messi" },
+  { src: "/public/nike/4 NIKE - ATLETI.png", alt: "Atleti" },
+  { src: "/public/nike/5 NIKE - MORATA.png", alt: "Morata" },
+];
+
+const cabecera = { src: "/public/nike/1 NIKE - CABECERA.png", alt: "Cabecera" };
+const footer = { src: "/public/nike/6 NIKE - FOOTER.png", alt: "Footer" };
+const videoSrc = "https://player.vimeo.com/video/951917982?h=e9b4b62249&title=0&byline=0&portrait=0";
+---
+
+<Layout title="Nike" description="JUST DO IT. Aunque a veces hacerlo sea un problema">
+  <main class="bg-black">
+    <section class="image-section">
+      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+    </section>
+    <section class="video-section">
+      <iframe
+        src={videoSrc}
+        title="Nike"
+        class="full-width-video"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"
+      ></iframe>
+    </section>
+
+    {images.map((image) => (
+      <section class="image-section">
+        <img src={image.src} alt={image.alt} class="full-width-image" />
+      </section>
+    ))}
+
+    <section class="image-section">
+      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+  }
+
+</style>
