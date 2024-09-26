@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const cabecera = {
+  src: "https://s3-alpha-sig.figma.com/img/e223/bf66/cb0e8e7984e6458e06dc7fe791525a67?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VqWcc~qV3iEblbPrSQmukwG76h5a12Nyw3WNHLWBt6KqFwmR4CMD9FUjU3QlHE6XAenm0YR-K00gp9k67qqS5j2vU45mMaaEFwsjxMw34rN3kS6kdFA74jplPbySPu3y5Q54OMfgB3PWN9ewEX5Wy2k4iqJEB5Zhuf9BDSQu9s5tZIOtXSIt-PED-cwlqNCGSDBLq6N6Qaqnk8hWUlIOGDxKBa3PHsiBdOHvz4MqH~VcNlKyzXi3V7dH-eUG7ik7oREuAqV4xGzdAuZz5rJjJ2pipEgsNTW4BgsCt4kJOHcFfcP9dypC-Qs6ZL1xQHVdq-ZDfSnnB2e0J7qZptGd9A__",
+  alt: "Cabecera",
+};
+const footer = {
+  src: "https://s3-alpha-sig.figma.com/img/db88/2e37/40235255490352d852d98244b6fd8168?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cxXHzMcanRZd4DaMS-hlwHXQ0mhgsau4-0-rhoPgURCZAkGhPutYBUizxOPxtyBNydHkbdBWQb3ZuCcFAZy~qvnbnk8fxiWOBKwGxXwDMwECrUVVtrjOpDuf~6sWmBtAtOB08XDuEmZ~otZcXnprNX7IL1vFnJ8G1X2X5SD5RNWRyioKjaWAeq3tBtJHrVUz9wlQesr6LTlHtby1jQd5pN4X1OALmqlCI~DIjaZxU3R8lx6CFVR-ImitoUPcG0R80x3l~yp3OM1PhPkvG6dU-U05WwNhcaj6aWAz1EYR-bTkUF0GKVme~fqP1AuE3jmheZelsaLbrWjLx-SDl2s4cA__",
+  alt: "Footer",
+};
+const boton = {
+  src: "https://s3-alpha-sig.figma.com/img/5735/c85a/ece63e50d7e06b34a03f27deac315aa4?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fSx2088Ln7-c1EcuDVjVcmlcOOB1gmTCt31Knx97VHZ6I8ZzmGYnTPNYspHJXadQvJjXXam68j6srvGAGpdyjJ12GDMHRHp95ixAp9zjz4viRMQnrQ-9SFwUOjoCpiMM6GZCe7ClCLHhfZjZ7BY7h4WqjQs3MiabzmI1w2POFIMtv9vNRF7iOFQlVAW9jdJt02BHUWeG0ItBQyxsJj7c0V5sXjKYgUOBoJH0xUrkpol-iy4sVOQjVaEpE~dNS1cZAhJEnHUfkSk8-50NSqe9~zbyhVDmxMiPSNZ1kUs8o46dI2aqSo6KtqJNN00OVqwifq15cSNsFsr5uHE7KXSAAQ__",
+  alt: "Boton",
+};
+
+const videoSrc =
+  "https://player.vimeo.com/video/943596433?h=80bf2d2700&amp;title=0&amp;byline=0&amp;portrait=0";
+---
+
+<Layout
+  title="Resaca"
+  description="Nosotras nos lo tomamos al pie de la letra, borramos la resaca del mapa, literalmente"
+>
+  <main class="bg-black">
+    <section class="image-section">
+      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+    </section>
+
+    <section class="image-section">
+      <img src={boton.src} alt={boton.alt} class="full-width-image" />
+    </section>
+    <section class="video-section">
+      <iframe
+        src={videoSrc}
+        title="Nike"
+        class="full-width-video"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"
+      ></iframe>
+    </section>
+
+    <section class="image-section">
+      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+  }
+</style>

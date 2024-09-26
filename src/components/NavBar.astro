@@ -1,21 +1,110 @@
 ---
-interface Props {
-	isMainPage: boolean
-}
 
-const { isMainPage } = Astro.props
 ---
 
-<header class="fixed left-0 right-0 top-0 z-50 h-[100px] w-full bg-white">
-	<nav class="flex h-full items-center justify-between px-10">
-		<div class="flex-1">
-			<a href="/" class="text-4xl font-black">carmen puche</a>
-		</div>
-		<div class="flex-1 text-center">
-			<p>/portfolio in process/</p>
-		</div>
-		<div class="flex-1 text-right">
-			<a href="/contact">--> creative at David Madrid</a>
-		</div>
-	</nav>
+<header
+  id="main-header"
+  class="fixed left-0 right-0 top-0 z-50 h-[100px] md:h-[90px] w-full bg-white transition-all duration-300 ease-in-out"
+>
+  <nav class="flex h-full px-4 md:px-10 justify-center">
+    <!-- NAVBAR PC -->
+    <div class="hidden md:flex flex-1 items-center justify-between">
+      <div class="flex-1">
+        <a href="/">
+          <h1 class="text-4xl font-black">carmen puche</h1>
+        </a>
+      </div>
+      <div class="flex-1 text-center">
+        <p>/portfolio in process/</p>
+      </div>
+      <div class="flex-1 text-right">
+        <div class="flex flex-1 flex-row items-center justify-end gap-1">
+          <svg
+            fill="#000000"
+            height="13px"
+            width="13px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 330 330"
+            xml:space="preserve"
+          >
+            <path
+              id="XMLID_27_"
+              d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255
+         s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0
+         c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+            ></path>
+          </svg>
+          <p class="text-[14px]">creative at David Madrid</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR MOVIL -->
+
+    <div class="flex md:hidden flex-col justify-center items-center gap-2 pt-1">
+      <div class="w-full text-center">
+        <a href="/" class="text-4xl font-black">carmen puche</a>
+      </div>
+      <div class="w-full flex text-center flex-row gap-2">
+        <div class="flex flex-row items-center gap-1">
+          <svg
+            fill="#000000"
+            height="13px"
+            width="13px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 330 330"
+            xml:space="preserve"
+          >
+            <path
+              id="XMLID_27_"
+              d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255
+         s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0
+         c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+            ></path>
+          </svg>
+          <p class="text-[14px]">creative at David Madrid</p>
+        </div>
+        <p class="text-[14px]">/portfolio in process/</p>
+      </div>
+    </div>
+  </nav>
 </header>
+
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('main-header') as HTMLElement;
+    if (!header) return; // Salir si el header no se encuentra
+
+    let scrollProgress: number = 0;
+    const scrollThreshold: number = 100;
+
+    function updateHeaderBackground(progress: number): void {
+      const opacity: number = 1 - (progress * 0.5); 
+      header.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+      header.style.backdropFilter = `blur(${progress * 8}px)`;
+    }
+
+    function handleScroll(): void {
+      const scrollY: number = window.scrollY;
+      scrollProgress = Math.min(scrollY / scrollThreshold, 1);
+      updateHeaderBackground(scrollProgress);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Llamar a handleScroll inicialmente para establecer el estado correcto
+    handleScroll();
+  });
+</script> -->
+<!-- 
+<style>
+  #main-header {
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
+</style> -->

@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const images = [
+  {
+    src: "https://s3-alpha-sig.figma.com/img/3b2f/7739/53fad3408a284813f2fff491e9a65f95?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XYZBzrKWl1p5jOtvw2v9kQtQe4XkPAz501mgUPi-nmtkTOWForVqYPJ3rbjmACU-hA44o7HQjXBPYKJEPkEcLC2bN7cZkd~4fga5ehZI62iEn6UKbpznp4lJYzhip~OExwGa4sGCQ7rvwuVzc8~r5jd~ZO0Aq8RcCwRpNIFrUhoXqrgV9lNtZzblbbT1nFdnFi-lzgnsjKDUWGHbpctmryNPkD4IK~HvWbisMi~hal7qUK46dtNLuk62t79~ZN7qNn-3N58fr5Dniht6xxFo8-r1HRCbd891WLHbWqB2aZjZ4bmKqdpsjujNAY-RFoNvF9HmutiCiLNt9u4S11RINQ__",
+    alt: "Messi",
+  },
+  {
+    src: "https://s3-alpha-sig.figma.com/img/ccf1/4e23/4f4aef0a7411fa4cb2f87ce27d427f0e?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=T9kMFhLGDV7wG2lRLljQdg98zbRv5wvyLIWrDRuTNwQT0iN9O5hINcoDHO1hS9ZyY6zZZ9-TjVPbc~xhBuMeW2U4xkiWrM5dcD9k-bO7W4-cV9K7rCAjDirFDTJcaHvWa9tJXUJkRhepu9QaMrzKgkDC2jAmxhAwC6yG6Cprj4AOgH4wi2BYK3JvHYX4RfLjtoS~MCKIA5kvTiHxbLiuGdXJU9rlwQXbn2xwzoLqhfhTpiCxQ9Q4VptV2nT628agWQt7kC7oYTKx8wX67BJqtvu4YzOOo724zivMqc~tm-3i6i-9cgA27g2926K2RORSYJ1OOZobDy1a7qIdan4AlA__",
+    alt: "Atleti",
+  },
+  {
+    src: "https://s3-alpha-sig.figma.com/img/c62a/5132/730d3db29b2219835335f16fd518de16?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cct9RNKqdRRvgUXNKndYUQHU8TbfnbWbMybjbvhtZqvVlkeW1bsjAV-LeXeqqL-TMCxA9XQEdjZXqAG9sBppdtU~TyOeCkEUR5FaKe3RFBtv80IdOzVeCltVd~Usolh0FVHfNhQ~srcfzdJxnmgZ~ePkEi7uMMEtAejpZiwFcibXLcj1zElxAbXLZ2FxlMKi6MFyo7w-aUY5UbqhTYHrI5F72rdd8Ahy7e3ufcy0s~RhsPj3ZL0kezUgxIg9-owUwnNHnVEInf9znOWMMWlpvcprNpS6ZxsdftaQMBqZ4CRUVDnGqkB2Qva1lO9k7FKWZ4XkY-eR87HL3FlEUxC58Q__",
+    alt: "Morata",
+  },
+];
+---
+
+<Layout title="Durex" description="Durex">
+  <main>
+    <section
+      aria-label="Proyectos"
+      class="grid gap-x-6 gap-y-3 grid-cols-1 md:grid-cols-3 px-7 md:px-5 md:h-lvh pt-[50px] md:pt-[90px]"
+    >
+      {
+        images.map((image: any) => (
+          <section class="image-section">
+            <img src={image.src} alt={image.alt} class="full-width-image" />
+          </section>
+        ))
+      }
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+  }
+</style>

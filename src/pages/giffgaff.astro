@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const cabecera = {
+  src: "https://s3-alpha-sig.figma.com/img/f59c/1bc0/162451a3218e73349f1bc6c7c5d80844?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X98hwH2aK9k2pIpRMdZIxB~sSn~yW3I~mMp-Q4KIwav4c5vXQplFjSmwCGtdFAPZ4cYNEMGxyhgxP4ldYPLdf3UejJLeuXonSehP0jL9ycWAOAyA-aHhgPf0HTyJRcHBYCzyIwU9-KA1t2oxB2gq5VJuWvgZuhIbh5QOcGW4XyvZ1eUZ8MqKuaQ9qGA~xF7Vx6I3ed4XakT~fRtwb2brN4H5RczKQA9VSHU0vY8e3ueKO9LtfKD-3n2dHtNy6Xi9984yZef39vIh1rorYhhdFdPEQTB0qBgiQYoYqp-jhOgx8VbKr4Dc-v~jd-MJafRc9oXCnypPWK5Co~RXpiNrbA__",
+  alt: "Cabecera",
+};
+const bocetos = {
+  src: "https://s3-alpha-sig.figma.com/img/506a/8cd7/df8b3af6f2f103dee5c7dda05e1379ee?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n4DXRAReun9oZgfrfYdqfo8qCSvTaL4wYfLCR2zNxoeDROYskvNytSYHfQMv7V0SnCTQfhMLwQjIqkYq9i4okDMCA3KHDTrlQT19Ye0d-FDeWgtLheSWGRtnD0FAZxazzDFz6zLlDS6gnRZfEBIrL7rZXiJ1F8-DVMaqW1-VnR7AiFHuJyDsu0BniPE9ODMGMsdvIeMxZj3Cq6ZtB1a7l4370JY0OQ~01iZQlsBGhk~Xy8dOSW38gLG~bx1l~Aj-NNOZ4eZ0TGPxAJ84Tabl~KnqiFaOikOFOEKfvqSQUBlYB0gpQn~v1dRCZ6V6wEZKglC-TAhxSMRvFwtSTLDvQw__",
+  alt: "Bocetos",
+};
+const footer = {
+  src: "https://s3-alpha-sig.figma.com/img/2ecc/f756/ada479d314845a862dc015d846db457e?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K7aOI7aEaQXPr1vAMYP89oTijjUuw8xklV~9V9RK2NahXxa91bT81Of8573r936vIjuw0Xfd5Ry0pgUA0jt-7I~MCPwnPUmzRU1tQnxUMn7xLD6nHuBD06b4hfKaEI51~hBb~YQbzKd3ueEciyKcuWFmJfWc0T5909BzGLrK20Jw5NV7GNornMC5TN79Mb0UYfIcrTdnHCtM9Pz6a~wZv1H8QRXzYXhhxmlBrkn0QfbBv1Rj4BdFdP~IBNpBDsQ2D5AGxjr-Oxbs6IIASmF3WrDHR7EEp3auMi~OCLE33gvnaDsNoAk4cNjkp~nqoMc0Oj7ZPbrFf8afGZ~RDTwSHw__",
+  alt: "Footer",
+};
+const racional = {
+  src: "https://s3-alpha-sig.figma.com/img/d68e/dc9c/747515c5cfd65cd0acad9c67f7b2036a?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=In8rGzzR1CLLRHSk8ns5InMtOCuAohzOnZNBxQmHieRQQOtLXjbS7Iq-YKkGY1Rn0N~hmPSSVEJDPfxPu7sa0sZ7WkphSRL-AvBa8x8FKCrCpnH251WainrBTXlTo604qD7WbRs-YZUmgfw3qqDCA9wmfIKfIR7wmIeLtfHP8WE-pW1E~kKXbFC6Q0xMQV232zcfnM1AicrXc6DXVfMw3tPLJHWd4Mz~2tCXcaamYigxxeb8JGox4H4dADpjps08OaERbZn81ENAMGMK63tEFMo53Hr58GHajuA2OSYbuYfF91EsUaWfonrgXNLk6xtTqsiolctVVQVOgLrbarOvpw__",
+  alt: "racional",
+};
+
+const videoSrc =
+  "https://player.vimeo.com/video/945923270?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479";
+---
+
+<Layout
+  title="Giffgaff"
+  description="Giffgaff quería hacer una campaña de PR para dar a conocer sus móviles de segunda mano en Londres. Capitar europea de los robos de móviles"
+>
+  <main class="bg-black">
+    <section class="image-section">
+      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" />
+    </section>
+    <section class="image-section">
+      <img src={racional.src} alt={racional.alt} class="full-width-image" />
+    </section>
+    <section class="video-section">
+      <iframe
+        src={videoSrc}
+        title="Nike"
+        class="full-width-video"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"
+      ></iframe>
+    </section>
+
+    <section class="image-section">
+      <img src={bocetos.src} alt={bocetos.alt} class="full-width-image" />
+    </section>
+
+    <section class="image-section">
+      <img src={footer.src} alt={footer.alt} class="full-width-image" />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+  }
+</style>
