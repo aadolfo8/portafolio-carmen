@@ -18,6 +18,11 @@ const moviles = {
   src: "https://s3-alpha-sig.figma.com/img/4d42/bee0/70e593841ec57aad9b8c80a29bdc1bed?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A7Sb7PFY29OLIBaVzZ1BGPc1s-hajAbRpsMxwa0xz3TooFFuDYgXH25zYV7lKNoOd-6-ydhxBV4l2WZOTYFjZq10B6lcpPwhk23LIYNrrJ5zzxXrBUnJGWh6ZUsVscrFZkISyzbP5mi53m3V-gxg5Z5zaY6lVTEhfuqXFeexHZ6dGO~f5VgCRqgo2ubxJXbYvhS8UdW1Ua4CTs8Y05Y-lzoIytx5W7NdOmP96V1j7ovwpaO5YEk~C4ByiiqJRCD2ZX9inHdDxeFH51JSuz4Cn60uzRUoKlPcfYSRc64ceouXHfLZw6C8Ie7HdDgAU0hlrwbfYljOnm5gWYKxNR-geg__",
   alt: "Moviles",
 };
+const texto = {
+  src: "https://s3-alpha-sig.figma.com/img/e8d9/ad8b/fd1428d8e52e0c003fc38b16989c90f7?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vg2AGxF5b3vxOg4GS9zGjdt1V1TT8-ldD4BWE8VQyt7uQ~w-ry9kqgSfAHpDIsYXPbUWgyh1eW~ed0RojXHtIx0w-6eRsBV-RxLvdYdLNPegSeKToVybuyUuJr2jQ4TgQOzrhKDciplWIkDeAYV8YSW2SkFrL8qYxcIwbeDHa8PrTbSvUs6kD1nPW3WMYwJ41d0THvgfxqYJhI~nj3Xxd3o9LYXRbyU6k3b1BcxZAHE6Vd2VFI~eFWmyL29Zps61Hg3WeicD-8CY9RPeDokWMSFLfqbQLQPHc8jqfM6FZkpduOuCIbWIEo1ywbmTbzdy5tC7nfWj91Uoq0t0WkITNA__",
+  alt: "Texto",
+};
+
 
 const videoSrc =
   "https://player.vimeo.com/video/936601328?h=12cb3368ef&amp;title=0&amp;byline=0&amp;portrait=0";
@@ -33,6 +38,15 @@ const videoSrc =
       <img
         src={cabecera.src}
         alt={cabecera.alt}
+        class="full-width-image"
+        loading="lazy"
+      />
+    </section>
+
+    <section class="image-section">
+      <img
+        src={texto.src}
+        alt={texto.alt}
         class="full-width-image"
         loading="lazy"
       />
