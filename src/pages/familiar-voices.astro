@@ -28,9 +28,10 @@ const videoSrc =
   title="Familiar Voices"
   description="Conducir solo aumenta el riesgo de tener un accidente de tráfico. Pero tengo una solución"
 >
-  <main>
+   <main
+    class="main-project" transition:name={`image-familiar-voices`} transition:animate={fade({ duration: '0.6s' })}>
     <section class="image-section">
-      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" loading="lazy" transition:name={`image-familiar-voices`} transition:animate={fade({ duration: '0.6s' })} />
+      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" loading="lazy"  />
     </section>
 
     <section class="image-section">
@@ -40,7 +41,7 @@ const videoSrc =
     <section class="video-section">
       <iframe
         src={videoSrc}
-        title="Nike"
+        title="Familiar Voices"
         class="full-width-video"
         allow="autoplay; fullscreen; picture-in-picture"
         allowfullscreen
@@ -57,12 +58,4 @@ const videoSrc =
   </main>
 </Layout>
 
-<style>
-  main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 90px;
-  }
-</style>
+ 

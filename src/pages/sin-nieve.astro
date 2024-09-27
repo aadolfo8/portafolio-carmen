@@ -42,7 +42,8 @@ const videoSrc2 =
   title="Sin Nieve no hay sociedad"
   description="Los Andes se derriten un 10% cada diez años y, para reivindicarlo, aprovechamos que todo el mundo habla de la película del momento: 'La sociedad de la nieve'."
 >
-  <main
+   <main
+    class="main-project"
     transition:name={`image-sin-nieve`}
     transition:animate={fade({ duration: "0.6s" })}
   >
@@ -58,7 +59,7 @@ const videoSrc2 =
     <section class="video-section">
       <iframe
         src={videoSrc}
-        title="Nike"
+        title="Sin Nieve"
         class="full-width-video"
         allow="autoplay; fullscreen; picture-in-picture"
         allowfullscreen
@@ -69,7 +70,7 @@ const videoSrc2 =
     <section class="video-section">
       <iframe
         src={videoSrc2}
-        title="Nike"
+        title="Sin Nieve 2"
         class="full-width-video"
         allow="autoplay; fullscreen; picture-in-picture"
         allowfullscreen
@@ -135,12 +136,4 @@ const videoSrc2 =
   </main>
 </Layout>
 
-<style>
-  main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 90px;
-  }
-</style>
+ 
