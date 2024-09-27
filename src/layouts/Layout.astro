@@ -3,11 +3,11 @@ import NavBar from "../components/NavBar.astro";
 import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
-
+  isMainPage?: boolean;
   description: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, isMainPage = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -41,7 +41,7 @@ const { title, description } = Astro.props;
     <meta name="googlebot" content="index, follow" />
   </head>
   <body>
-    <NavBar />
+    <NavBar isMainPage={isMainPage} />
     <div
       class="selection:bg-primary selection:text-secondary min-h-screen w-full"
       id="main-content"
@@ -89,6 +89,14 @@ const { title, description } = Astro.props;
       .full-width-video {
         height: 56.25vw; /* 16:9 Aspect Ratio */
       }
+    }
+
+    .main-project {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 90px;
     }
   </style>
 </html>
