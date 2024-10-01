@@ -1,5 +1,4 @@
 ---
-
 import Layout from "../layouts/Layout.astro";
 import { fade } from "astro:transitions";
 
@@ -21,8 +20,12 @@ const frases = {
 };
 ---
 
-<Layout title="Spotify Plan Familiar" description="El plan familiar son los padres">
-   <main
+<Layout
+  title="Spotify Plan Familiar"
+  description="El plan familiar son los padres"
+  favicon="PLAN_FAMILIAR.png"
+>
+  <main
     class="main-project"
     transition:name={`image-spotify-plan-familiar`}
     transition:animate={fade({ duration: "0.6s" })}
@@ -63,5 +66,3 @@ const frases = {
     </section>
   </main>
 </Layout>
-
- 
