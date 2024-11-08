@@ -4,33 +4,32 @@ import Layout from "../layouts/Layout.astro";
 import { fade } from "astro:transitions";
 
 const cabecera = {
-  src: "https://s3-alpha-sig.figma.com/img/ceaf/3e4b/543e8cd8a55509b2d45da88f6fc585c7?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GYxZTcimPTQFESDiproFqubXfi-QNoX5G~Ot4tIsNiA4q8eK0FVmWhCE42wJ-CGRYgfpPnNetaIJs~lEINtUyuhB9HXuoX3DApDkCcTeSjFZignhUgZ9nBPSg3B6shS3gx4zlbAe1ovWtOo0sh74fQEvCUTRv934OdaYozZsGtonlbKbm~pNfoO1Bo-xPZzs-79425o5YFOAmfztRAGHo8xZgfb0fLxZ0rXW45zLo4R3W-mcVU7RmM5L1dvFHPmcvZBsDRVijN40JACsFIPjChgZCVxGUykalP~qtaIoj8h2JHpFTQt6IHo64DwkJ~v8OqOWfcFOyBtVzhTDSjespQ__",
+  src: "AUDIBLE/1.gif",
   alt: "Cabecera",
 };
 const racional = {
-  src: "https://s3-alpha-sig.figma.com/img/2b51/4118/50ee64728554627e1f21d56f82678d29?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UtyBDJ2d~Lj7rtW5G~9NkGqSXd12-1spqju4x3n-rSGvxjmldy~9HuUZpeu0kg80QhWKtBmRyHNhZ0ROVtqT7SWQg-IstegS1qwTlBMt4XiwWk-hTKYKImLOGUzcqa87Cslt5X-FQJ1G-jiB8bG5mxzdOl0LXAv-o8GIPX5lz~a1yT7OpawC4y0zygq8g7oGDYUxo-FzzHHW1y4dN4O2H1KN2xxVKELtLyTDCPqXCRDzujruRCU3C2kjX3cRfUKVfZW33zYRMSO2Gdx2bSKWcBYXs1GB~wJLI~WYdFDF7ndNKXuk8ROjyjEOng7CKl6MWz3m7mSymISPdQ9iXebI3w__",
+  src: "AUDIBLE/2.png",
   alt: "Racional",
 };
-const footer = {
-  src: "https://s3-alpha-sig.figma.com/img/a6a5/5e7b/3f223c764bb7c76db1a60ad9aca0155b?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Xjs4lHefMvbG~YQxDXAlSp3eIebOc49UURMRcQCY-QkiwDoJx7DDdsxYUwpjWgBfzj7LFLtuwV1edIxkIOVtBFFlwipnUKCbfM1SmbcuR6CRWFIFfXF6orao5pdo0q4xP3fBRNjcnAh~hOea~QEyx2nR92P~y-kAAOfY1OdsRLvCmxn3q0vVFY61ilE6Q-WDFl4mYvzEU9AACDp91xVeBvvI0IiuatUHFCSQbJ~gS5vxXPYZmJ2VZ~L3y4TjOXN2mZvjIdReeiEX2q9jtX6SC0FQjYLE9PPUKHgJIDdFQ0zz842QmyPQEZjIpnCP~PmtUG0uCrvrKdM~zCQVN0rqJA__",
-  alt: "Footer",
-};
 const graficas = {
-  src: "https://s3-alpha-sig.figma.com/img/898b/dede/c35b5b3d95e90871c8b0e6bbb66c80a1?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fxY8QuVDfITJYxhWG1-h2thIRSHOzanFyd3kQjGY1w-2UIK0Qobwv01HSzDe86mDYxCU3OzcB~yOP2-yRODlg5YZqD~nglv-xxiUA6H~eYVkX8YgcJxDlAPCQLPfUI13LSw62GctcspSKbTPoXWwCMtrRUznCPhpQ5kDQlERb4mxsNfLIC31VpC4Rqtr2b7o9XG~btEJeOqjajoD~wiFi8~fb2LDr7RYJU4W-iR-AtTwVMyjE6TD03Kycc6dn8RbI~FCtYW1SyJVb0B8caUWLiyKLniCSuNPpoZNp6DiqE75gWZSqOyxvmlcSw1eag-GioGFqT70NeSeP0UEW3yZ~A__",
+  src: "AUDIBLE/3.png",
   alt: "Gráficas",
 };
-
-const revista = {
-  src: "https://s3-alpha-sig.figma.com/img/544e/34cc/615263e5ee865d474367668dca8350ad?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nF-Nx57MlJ4jSLhhgBVtf~vBhRgt5Yxvs9CFh5mKAAPddyoqSef8yeTf3g9O5lsisxs5wRpeuMcW5yAu-Nlmt~EK2PszhwWfrMoch5ERq2Dr5AMAruBvq5JCKTeust16BvuOPR29~Kop7yW6EWmuA823496J9HCB7rBtl-Y6wfE6qq61GYm2OlM6pOMkN2qpTb6Y3woxVbvmiOXd16M~7xdiZ~OKp~EozIXAiZBkJs4c3OH36bigPIZA~xgRr-GMmlXRXnwy5Yw79k9PUYgV11b0F~ACJiW~6O4Sk5UFpG3Q6p95dbBFBgHu5zoIP30VbkwbKsJMPajOAGIxt9p56A__",
-  alt: "Revista",
+const metro = {
+  src: "AUDIBLE/4.png",
+  alt: "Metro",
 };
 const graficas2 = {
-  src: "https://s3-alpha-sig.figma.com/img/a52d/e7be/1f2c0c3b0922e4adb3990a96a2a7b9b3?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aajSKvuJe6G4EuaJa-lTE5YzTz6lt2A6MBL7hke5aa8gk1o~ns3shfJt8tqm1~doBhVtHyYSPvM3VE~pGJ4VfiPQLTcsdfynxUCWlBofE29k-c7mHefIbtVbT~LXoaYFUoOJVvmGUtvzqWnNWVa1ewH~r1E0R39jNoNh1IAKR0hrrur3NLQLSgs6WUsQDvsD9bAGoe2VBgz4uPmDDz3YFucvCjld7kYgRROhAXpc0ML~3Pn6DxU4wsf8yJVauEUu2VyZCwljqBBt9yXq9W9p5BUv5UkPjW7FmihQq9PraAhGzdSUx~YJgCg1xC7BwkDDnqvHlWlRkAGoHu7H8Xo5Ug__",
+  src: "AUDIBLE/5.png",
   alt: "Graficas-2",
 };
-const metro = {
-  src: "https://s3-alpha-sig.figma.com/img/2a10/4635/1528f0e2fb7d00b643b629ea29f7e93d?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CkSoKGhkFZjKSF~9B6hUm2sumantcfvBluRIJ-fYv95fQqvyyrHJI85kcS1oi1pak4ozCKByWkoOQ5y0jpelVozk2s~XOdH~mPuWQSHUT-z-7m7wJH6O9G3GSJ79GBz82pBC0bLo~JXSGg8BgvktnlpLnuu9t51izu1GoaXRxoyBsrLCj4YhxdL7hH3vBb3wkCpsN~vXTElfqoExvFgq5T9dG5sZxYuoaPHaU6TjRd4cUBZgKh6eys98iHwhJMBgK8WsmQmQVBNZRPKcaJDvc7b8g17pSAkrUDV5ig5OZif0k7ywpnUba8Nq7UeoQStGShqLvz1FDHL9tmescZr6PA__",
-  alt: "Metro",
+const revista = {
+  src: "AUDIBLE/6.png",
+  alt: "Revista",
+};
+const footer = {
+  src: "AUDIBLE/7.png",
+  alt: "Footer",
 };
 ---
 
