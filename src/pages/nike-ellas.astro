@@ -1,28 +1,30 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { fade } from "astro:transitions";
+import Layout from "../layouts/Layout.astro";
+
+const cabecera = {
+  src: 'NIKE/1.png',
+  alt: "Cabecera",
+};
 
 const images = [
   {
-    src: "https://s3-alpha-sig.figma.com/img/473c/7934/a3cc5fe6556a92d0da7aac1a23bb2386?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iwkYHF2TZ6VMtcwqwx2YEvCoIYQ2A-P0qsyBjp7icB82D5Ky4DOLpYVG~LBy9cbXvQNeh7~BqvrsgnF0hbWKl2vqJ2jr3B3nHcdCAqtTfA7FVR~AuThjdQJl7COKbTYh206f3oUXS-JVRLa7xgD0zcJywYC6m4zszR8kMPUJ4gGHjkmV7mENPG9n8PPdzmCTcR2BH-6QACyRQEKn46H4Epf1FcxWZZnTPD5xwhP3U5ETKh-vcEEBTg2YytQXeF1xvQppqT8bowtJMWE8x~fyMDr0scsFfO4~ZkKkd21Zt3E9jMZZZ5OC3ACBTiflCBLbwr7GalF7yq0M2wgsiZjh6w__",
+    src: 'NIKE/3.png',
     alt: "Messi",
   },
   {
-    src: "https://s3-alpha-sig.figma.com/img/c666/ee52/67094c613340b036195c231877ee2713?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cTiR2Zgd8W-o3pw9bnaOmFMgSNbKQ-Hgglebhz06H7b5SF9AHvL2YVyINZ-pjQgGzMF-f-8Z0uon4fDKhyfm0LJPDujla7aDRkkBSlKRqcyo91CdjZPoHgs4BZ9kueSJHj~7ZIim5IQXWiq8Y8tqyoYqEP5vFaUiQ0djB-fl7vPXZS8NwcG7aYm2~~o-3D5rMF6nZar-CEx8ngCcbYIyNO1biEuqOR35dU8a~WnmqZyIwy60FAX4motVcRBjxfRTLph1aflGIOIa69TD391Hrv~mumZ0ISxt1aNGAe2OQdoti6l1sg9rW5HoTU-QEA0txWv2c19lP9BWkNSz47IhRQ__",
+    src: 'NIKE/4.png',
     alt: "Atleti",
   },
   {
-    src: "https://s3-alpha-sig.figma.com/img/16f6/6227/cb05848dbc0ef4701c2fe8465da489a9?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WFhVrmxjI~10N90cGj4OUjvQdXBTjfpMDR9NHSAp4roaTrp6KHtw-Wt4Bw0-2BYbaSNpwbPBq1tzYrTTX8Zqqgd~3LY8DvTPAn1CRdp9lbU8pTwgeKQillzph2rYZM7cy1BA6GDSZ8gkIk~ovbEfLHD1V9sNf1CtcgJlQqhZmydS-1jaxLwltMmFYSIatVh1RRC0xjfb1SjTavNpiSDkEXkysoitqBixwiZiY8MmvlogWI3Qu2kE9nLpBVwVYrPGJNp1Yn1XMY41vIeTwZv4EtJUZBXcmNgzDdIH0cTHTRJbQO2Yts5cC-ieLotiN-P29MS0n~ku98bqvnLATpy~gA__",
+    src: 'NIKE/5.png',
     alt: "Morata",
   },
 ];
 
-const cabecera = {
-  src: "https://s3-alpha-sig.figma.com/img/9268/b65c/00bbf6cb9425e185154ce7dad2715a2b?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PScGzZ3pV3s5MEzEMuBBw9q3LQwBYL55JSLLE7PG9EbK5BqUBCCuprK8dKwmACGFOBm7yPwDQLVTg2P31YU9faeEJ2We6LgUCUBXC0XiP0xtamSzo6wYp59Ss5H2KX9IinLMzR0F3whpWxwHpDrwLUUWzVAx10ItE6nvx9qjEOkylkfSHdl5KmLvlJSpilqy2eb9QqYLfSQKaYXJRZMJzCBGm5VOSAMvku-MDBoblnw2vTa47ORYA2WR8Mqg6-0t7XZ3dZBqwS3QDme10YEi9q9l9ci-a8glSRs0jZ8pYxLR3miUe4oOdfTdL3sLaSVFw3Ix~455ly7AOLuznygx6Q__",
-  alt: "Cabecera",
-};
+
 const footer = {
-  src: "https://s3-alpha-sig.figma.com/img/f649/3dc5/1a962d65d4bb1c501c91d72613797a53?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d41U1IUW6GXeGO8AE6m8npcSOfQzeT6AqgRnL9i71V15maxJ7GR57m0WL2HG94hQ8G0Q4Z9KEldfpa2TkhunmiA0guK34sFh3CAxxILUtacice-cRFHC~1S5IFdPBv7BLdBZHAlTTd169Z9FdVhgCiO9tunsMJmic9NgjSEhF8mfY88ICxsq0kAbfe1AlSIxc1dejJUC~nxc01V~5Wyqs74Ggybc7tKDGE9zufecZDJEuHkFdinp-skqw4u68YwHsTrX3XcoJs9T3v~J83L0K2vBDLbnJROUnu-B5kQMiGyvcTWrgfX4F4ChH1DoRYwZx9nQhmbO455Ss07RxupXNA__",
+  src: 'NIKE/6.png',
   alt: "Footer",
 };
 const videoSrc =

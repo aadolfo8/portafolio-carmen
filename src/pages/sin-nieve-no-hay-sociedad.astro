@@ -1,36 +1,36 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { fade } from "astro:transitions";
+import Layout from "../layouts/Layout.astro";
 
 const cabecera = {
-  src: "https://s3-alpha-sig.figma.com/img/6fe0/7571/2c385bb7d0131c177fcd37857fc27bb3?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MuYVwIZhbMJokMXau2HgHhRqgowkmlWtV86TXxtWpPThW~g8I10qFEsjd7LDSFkZB0AQdkpArP8jwATi7oIKOPq61N7mo0w19~Vq5V85OYM0kdGHGaxU1G4cEpcT5CeO4gT7aUzoDAQlfyJSQib6XCUGaSnvEzsXPJNZ-npslmrWE8psAKyePVcHR-~usNg7eVvY2AWoAGbQPjvovUy5ccAeunvT5MlyD4oC~oBdGQaJiCMiohFa51~ZwOSeUnFGc-ZC-9JBxm~5SGADQKkqyhXOrAJ~BA4nDZg8gy-zUoHVQtJMQ6OPXLr2oSrB6H1VtG9EMyuuNAkj64pwUOomLA__",
+  src: "NIEVE/1.gif",
   alt: "Cabecera",
 };
-const footer = {
-  src: "https://s3-alpha-sig.figma.com/img/1eb7/346b/4bf4b38a0dad816da9085eb8ea1bd4a4?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UpNUBxWBnJspKrsDmaHY05fRv4nHxteBQJ2gsz43SKf45t4Z0CiAG8NHFIP2NsPiB1eeRGWc1wwo5ayy26it-Ya7xSzcWlvdpWWEvQcgLekai~9MYgA-UjrtOZ4UC5z-psMPjLxt7I1T-Nqvx~NzOYoc974hXe2pEX90ssG77pcHtOZzxc37W71i-0vKMKPVxXLQVYpD3f-lupgefHQVQ43TwCNW23JPVevgiE0~00nMk1l4M-EVg4pyj56vKwx9mdXr0Khk2dqXu5q5rWKMler2iULTNyKY7Ag2MaNEnXww8ynhfHza5WFzdtKO3pETbVhVUBZisXFhCpsgEIw82g__",
-  alt: "Footer",
-};
+
 const logos = {
-  src: "https://s3-alpha-sig.figma.com/img/d945/9f93/2b5e84f0d74493b26c1609cf8d524f7e?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nAIhPtX2IAl89JKJ46kjqO8OSabCmrOVE80V8tAHEQcfKl~UslG4k4NpHJLoaqInlZGUHB4ircSAEhqeZaqUbSHBBR-m2UscYpUiMG7ymR1GsAVx7VyeVAcbJ31Qnv6yZraKuICM7Gy8XaOcTHqpE734RvIvlxAKhI2TrEMUx5t~0OgHQ9DeG3M8eaFRNxfkI0MN2M-RI-AmVDUgGIHRPlw87GKqG1fKxGQ~tkzsUHvXuCr1vGXfaR2xqBSg~gR9f-lCUWJWRtLxjZo~OgnAAhTIRTGn-52YmGoOmSIsI0EXNjAEDQmaI3IwkndHn-tjn-S8S2K68NLuYkQv~5pH0w__",
+  src: "NIEVE/4.png",
   alt: "Logos",
 };
 const insta = {
-  src: "https://s3-alpha-sig.figma.com/img/5abf/56e9/efe16716c5e55095e1c2de9d1f19d2c5?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K-cQbVzbedKDE4uBRBQmBsusqdps32gdqDiUQLd6kyEC3VYVzbymYZ0ig8-Y0rP2VUI-l~gS9WJKVOKi1~OK79iUq0lHYFSqO8A48LCI-IXUl0GExevpbxNtJrHWC9NsNaRKgsISkYHoSfayDY06WiYwnob39KctWaEvfHXsDMBTlbgj82koKWwwGmNQoga3TkVywUmbYgvGd-8PhwlEgVb45iG0uM6k~657ctjUXW9X6s~T2~5P-PXN8gpj5LrCYiefWzd4SCONDMBReQLw8Tp7xWJUk15AhxZMz65meCAPdYgzdmH9H1Kx9OwSO0CDz6VcKKLXXA0vAQHqVoUzLw__",
+  src: "NIEVE/5.gif",
   alt: "Insta",
 };
 const carteles = {
-  src: "https://s3-alpha-sig.figma.com/img/dcd0/b5f5/e82dc3de69367c56693cc9baf5fcefe2?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IPRF4M66-dCvXzYE4zf3QqTlFLyew9QLpQ9NPAwQAbiZX-8wVAF5UQHSL7~i6Jip5HnDvQp1z3ocA9L4UyoU9IlPuixKzbg1uctaAWa0yu5BjAo4PbQeztizjbs0m5DEvFZOBsTSMkarKysUc~do-4f3FjfzDmd70ZfYPyI0aQC1sZbbqkz0XePnz99Lt-Pd7VF37wzqTl~pj2JVOgLi7MrV3TJkBqPoJXV74zZ0DjLpD6XZnrxn-kEsGruW2EQc1L0K5dEq4S-5qhZsUV15M3IYiEU6KLa7ciWxtIveKJCX6jqeH9pHRoBuY~R68g7OXaf59FYbWkUZH2tXKFN5Qg__",
+  src: "NIEVE/6.png",
   alt: "Carteles",
 };
 const historias = {
-  src: "https://s3-alpha-sig.figma.com/img/69b9/b2fe/61689fc439ebfe21ccc8737b524e3997?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cc4fGZSVVnnzuEORusxjuSF157KCIpH6NnXsr~TH2ur12QBIZRYaY5wE5cHh2SBzKnehPZOVeZ4xNRiFSSQbHPJ4uha0Ldj1~vIZPMma8y51-BDr6hINjp9B~6dsVOCq50jaUB9fwxQRY0sYiHQ~4W4xQNKfL9qjSDNnEcGRXwzqm~er0FNBUnmtkKo-4qw4z2GC0WYWvIuq0CicYljJnVi7tBw9Z1ZA1ZLDNuh6zxhvcNrZH7pz3eQ1SMhZEOuzvPslh8NS6bBz3HsZX0DiiVra9k8YAMYpYGw7EUXCtlnpX~kCi4LTGNwhgESCSBNWAdTZkWzUzh3ndSFe0FkT0g__",
+  src: "NIEVE/7.gif",
   alt: "Historias",
 };
 const comentarios = {
-  src: "https://s3-alpha-sig.figma.com/img/4593/4b2a/53b299249fa89e66056bc6874f76e4be?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OM5SONgofhl28QdfO7ts0oFAYFMh6v5XOsJoGrfWzaxyIP5T6kQgbhWPbnnVXE3QryT3KQ5ceek04HF~UoYCVLz7s0BsDW2VxwKZoN534OAF-ixFl7qgbVw6wHOsgH~biz5pBea93DNX0q3M8r43AQ5qWscG5m1r7w1XPkOHYSLbu10nLk40nDf9GO4QEYUdjJFmwstmwXPkhtVH-pVq1BPna8Bbp3ZzeroKdTtU6mbL8m3NXiIK-QDK6zs5XNxoOV8nykLzR0OVLH1O3IoltE5T6uf4FTWoMz4r9mHvm1CcdLmDCEXmsOawQApuEqJQ-Eex93OrwaoKt~tIbvH70g__",
+  src: "NIEVE/8.gif",
   alt: "Comentarios",
 };
-
+const footer = {
+  src: "NIEVE/9.gif",
+  alt: "Footer",
+};
 const videoSrc =
   "https://player.vimeo.com/video/950819241?h=20cae1ccf9&amp;title=0&amp;byline=0&amp;portrait=0";
 
