@@ -4,19 +4,19 @@ import { fade } from 'astro:transitions';
 import Layout from "../layouts/Layout.astro";
 
 const cabecera = {
-  src: 'VOICES/1.gif',
+  src: 'VOICES/1.mp4',
   alt: "Cabecera",
 };
 const siri = {
-  src: 'VOICES/2.gif',
+  src: 'VOICES/2.mp4',
   alt: "Siri",
 };
 const moviles = {
-  src: 'VOICES/4.gif',
+  src: 'VOICES/4.mp4',
   alt: "Moviles",
 };
 const footer = {
-  src: 'VOICES/5.gif',
+  src: 'VOICES/5.mp4',
   alt: "Footer",
 };
 
@@ -27,16 +27,22 @@ const videoSrc =
 <Layout
   title="DGTxApple - Familiar Voices"
   description="Conducir solo aumenta el riesgo de tener un accidente de tráfico. Pero tengo una solución"
-  favicon="FAMILIAR_VOICES.png"
+  favicon="FAMILIAR_VOICES.webp"
 >
    <main
     class="main-project" transition:name={`image-dgtxapple-familiar-voices`} transition:animate={fade({ duration: '0.6s' })}>
     <section class="image-section">
-      <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" loading="lazy"  />
+      <video autoplay loop muted playsinline>
+        <source src={cabecera.src} type="video/mp4" />
+      </video>
+      <!-- <img src={cabecera.src} alt={cabecera.alt} class="full-width-image" loading="lazy"  /> -->
     </section>
 
     <section class="image-section">
-      <img src={siri.src} alt={siri.alt} class="full-width-image" loading="lazy" />
+      <video autoplay loop muted playsinline>
+        <source src={siri.src} type="video/mp4" />
+      </video>
+      <!-- <img src={siri.src} alt={siri.alt} class="full-width-image" loading="lazy" /> -->
     </section>
 
     <section class="video-section">
@@ -50,11 +56,17 @@ const videoSrc =
       ></iframe>
     </section>
     <section class="image-section">
-      <img src={moviles.src} alt={moviles.alt} class="full-width-image" loading="lazy" />
+      <video autoplay loop muted playsinline>
+        <source src={moviles.src} type="video/mp4" />
+      </video>
+      <!-- <img src={moviles.src} alt={moviles.alt} class="full-width-image" loading="lazy" /> -->
     </section>
 
     <section class="image-section">
-      <img src={footer.src} alt={footer.alt} class="full-width-image" loading="lazy" />
+      <video autoplay loop muted playsinline>
+        <source src={footer.src} type="video/mp4" />
+      </video>
+      <!-- <img src={footer.src} alt={footer.alt} class="full-width-image" loading="lazy" /> -->
     </section>
   </main>
 </Layout>

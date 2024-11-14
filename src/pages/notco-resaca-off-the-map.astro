@@ -3,7 +3,7 @@ import { fade } from "astro:transitions";
 import Layout from "../layouts/Layout.astro";
 
 const cabecera = {
-  src: 'RESACA/1.gif',
+  src: 'RESACA/1.mp4',
   alt: "Cabecera",
 };
 const boton = {
@@ -21,7 +21,7 @@ const videoSrc =
 <Layout
   title="Notco - Resaca off the map"
   description="Nosotras nos lo tomamos al pie de la letra, borramos la resaca del mapa, literalmente"
-  favicon="RESACA.png"
+  favicon="RESACA.webp"
 >
   <main
     class="main-project"
@@ -29,12 +29,15 @@ const videoSrc =
     transition:animate={fade({ duration: "0.6s" })}
   >
     <section class="image-section">
-      <img
+      <!-- <img
         src={cabecera.src}
         alt={cabecera.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={cabecera.src} type="video/mp4" />
+      </video>
     </section>
 
     <section class="image-section">
