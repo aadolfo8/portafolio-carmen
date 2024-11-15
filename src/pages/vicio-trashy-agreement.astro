@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProjectWrapper from "../layouts/ProjectWrapper.astro";
 
 const mosca = {
   src: "VICIO/1.mp4",
@@ -39,9 +40,7 @@ const videoSrc =
   description="Vicio quería comunicar que sus hamburguesas son de alta calidad pero no daban ninguna pista del porqué"
   favicon="VICIO.webp"
 >
-  <main
-    class="main-project"
-  >
+  <ProjectWrapper>
     <section class="image-section">
       <!-- <img
         src={mosca.src}
@@ -124,5 +123,5 @@ const videoSrc =
         <source src={premio.src} type="video/mp4" />
       </video>
     </section>
-  </main>
+  </ProjectWrapper>
 </Layout>

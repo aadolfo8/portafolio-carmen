@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProjectWrapper from "../layouts/ProjectWrapper.astro";
 
 const cabecera = {
   src: "THIEF_SHOP/1.mp4",
@@ -26,7 +27,7 @@ const videoSrc =
   description="Giffgaff quería hacer una campaña de PR para dar a conocer sus móviles de segunda mano en Londres. Capitar europea de los robos de móviles"
   favicon="GIFFGAFF.webp"
 >
-  <main class="main-project">
+  <ProjectWrapper>
     <section class="image-section">
       <!-- <img
         src={cabecera.src}
@@ -80,5 +81,5 @@ const videoSrc =
         <source src={footer.src} type="video/mp4" />
       </video>
     </section>
-  </main>
+  </ProjectWrapper>
 </Layout>

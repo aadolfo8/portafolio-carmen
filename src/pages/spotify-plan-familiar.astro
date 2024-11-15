@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProjectWrapper from "../layouts/ProjectWrapper.astro";
 
 const cabecera = {
   src: 'PLAN_FAMILIAR/1.mp4',
@@ -24,48 +25,49 @@ const footer = {
   description="El plan familiar son los padres"
   favicon="PLAN_FAMILIAR.webp"
 >
-  <main
-    class="main-project"
+  <ProjectWrapper
   >
     <section class="image-section">
-      <img
+      <!-- <img
         src={cabecera.src}
         alt={cabecera.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={cabecera.src} type="video/mp4" />
+      </video>
     </section>
     <section class="image-section">
-      <!-- <img
+      <img
         src={mockup.src}
         alt={mockup.alt}
         class="full-width-image"
         loading="lazy"
+      />
+   
+    </section>
+
+    <section class="image-section">
+      <!-- <img
+        src={frases.src}
+        alt={frases.alt}
+        class="full-width-image"
+        loading="lazy"
       /> -->
       <video autoplay loop muted playsinline>
-        <source src={mockup.src} type="video/mp4" />
+        <source src={frases.src} type="video/mp4" />
       </video>
     </section>
 
     <section class="image-section">
       <img
-        src={frases.src}
-        alt={frases.alt}
-        class="full-width-image"
-        loading="lazy"
-      />
-    </section>
-
-    <section class="image-section">
-      <!-- <img
         src={footer.src}
         alt={footer.alt}
         class="full-width-image"
         loading="lazy"
-      /> -->
-      <video autoplay loop muted playsinline>
-        <source src={footer.src} type="video/mp4" />
-      </video>
+      />
+     
     </section>
   </main>
 </Layout>

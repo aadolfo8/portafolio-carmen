@@ -1,6 +1,7 @@
 ---
 
 import Layout from "../layouts/Layout.astro";
+import ProjectWrapper from "../layouts/ProjectWrapper.astro";
 
 const cabecera = {
   src: 'VOICES/1.mp4',
@@ -28,8 +29,7 @@ const videoSrc =
   description="Conducir solo aumenta el riesgo de tener un accidente de tráfico. Pero tengo una solución"
   favicon="FAMILIAR_VOICES.webp"
 >
-   <main
-    class="main-project" >
+   <ProjectWrapper >
     <section class="image-section">
       <video autoplay loop muted playsinline>
         <source src={cabecera.src} type="video/mp4" />

@@ -15,7 +15,7 @@ const { isMainPage } = Astro.props;
     <div class="hidden md:flex flex-1 items-center justify-between">
       <div class="flex-1">
         <a href="/">
-          <h1 class="text-4xl font-black">carmen puche</h1>
+          <h1 class="text-4xl font-black ">carmen puche</h1>
         </a>
       </div>
       <div class="flex-1 text-center">
@@ -73,7 +73,7 @@ const { isMainPage } = Astro.props;
             </div>
           </a>
           <div class="flex justify-end items-baseline gap-3">
-            <a href="https://www.linkedin.com/in/carmen-puche/" target="_blank">
+            <a href="https://www.linkedin.com/in/carmen-puche/" class="svggg transition-transform duration-300 ease-in-out"  target="_blank">
               <svg
                 width="17"
                 height="17"
@@ -91,7 +91,7 @@ const { isMainPage } = Astro.props;
                   fill-opacity="0.8"></path>
               </svg>
             </a>
-            <a href="https://www.behance.net/carmenpuche_#" target="_blank">
+            <a href="https://www.behance.net/carmenpuche_#" class="svggg transition-transform duration-300 ease-in-out"  target="_blank">
               <svg
                 width="23"
                 height="14"
@@ -143,6 +143,17 @@ const { isMainPage } = Astro.props;
     </div>
   </nav>
 </header>
+
+<style>
+  .svggg {
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+	}
+	.svggg:hover {
+		transform: scale(1.5);
+	}
+</style>
 
 <!-- <script>
   document.addEventListener('DOMContentLoaded', () => {
