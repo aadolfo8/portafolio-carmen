@@ -1,6 +1,5 @@
 ---
 import NavBar from "../components/NavBar.astro";
-import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
   isMainPage?: boolean;
@@ -8,13 +7,17 @@ interface Props {
   favicon?: string;
 }
 
-const { title, description, isMainPage = false, favicon = 'favicon.png' } = Astro.props;
+const {
+  title,
+  description,
+  isMainPage = false,
+  favicon = "favicon.png",
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <ViewTransitions />
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />

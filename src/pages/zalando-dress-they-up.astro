@@ -1,21 +1,20 @@
 ---
-import { fade } from "astro:transitions";
 import Layout from "../layouts/Layout.astro";
 
 const cabecera = {
-  src: "ZALANDO/1.gif",
+  src: "ZALANDO/1.mp4",
   alt: "Cabecera",
 };
 const frase = {
-  src: "ZALANDO/3.gif",
+  src: "ZALANDO/3.mp4",
   alt: "Frase",
 };
 const moviles = {
-  src: "ZALANDO/4.gif",
+  src: "ZALANDO/4.mp4",
   alt: "Moviles",
 };
 const footer = {
-  src: "ZALANDO/5.png",
+  src: "ZALANDO/5.webp",
   alt: "Footer",
 };
 
@@ -30,16 +29,17 @@ const videoSrc =
 >
   <main
     class="main-project"
-    transition:name={`image-zalando-dress-they-up`}
-    transition:animate={fade({ duration: "0.6s" })}
   >
     <section class="image-section">
-      <img
+      <!-- <img
         src={cabecera.src}
         alt={cabecera.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={cabecera.src} type="video/mp4" />
+      </video>
     </section>
 
     <section class="video-section">
@@ -53,21 +53,27 @@ const videoSrc =
       ></iframe>
     </section>
     <section class="image-section">
-      <img
+      <!-- <img
         src={frase.src}
         alt={frase.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={frase.src} type="video/mp4" />
+      </video>
     </section>
 
     <section class="image-section">
-      <img
+      <!-- <img
         src={moviles.src}
         alt={moviles.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={moviles.src} type="video/mp4" />
+      </video>
     </section>
 
     <section class="image-section">
