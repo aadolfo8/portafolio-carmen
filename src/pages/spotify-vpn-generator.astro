@@ -1,25 +1,24 @@
 ---
-import { fade } from "astro:transitions";
 import Layout from "../layouts/Layout.astro";
 
 const cabecera = {
-  src: "VPN/1.gif",
+  src: "VPN/1.mp4",
   alt: "Cabecera",
 };
 const texto = {
-  src: "VPN/2.gif",
+  src: "VPN/2.mp4",
   alt: "Texto",
 };
 const moviles = {
-  src: "VPN/4.gif",
+  src: "VPN/4.mp4",
   alt: "Moviles",
 };
 const mapas = {
-  src: "VPN/5.gif",
+  src: "VPN/5.mp4",
   alt: "Mapas",
 };
 const footer = {
-  src: "VPN/6.gif",
+  src: "VPN/6.mp4",
   alt: "Footer",
 };
 
@@ -34,25 +33,29 @@ const videoSrc =
 >
   <main
     class="main-project"
-    transition:name={`image-spotify-vpn-generator`}
-    transition:animate={fade({ duration: "0.6s" })}
   >
     <section class="image-section">
-      <img
+      <!-- <img
         src={cabecera.src}
         alt={cabecera.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={cabecera.src} type="video/mp4" />
+      </video>
     </section>
 
     <section class="image-section">
-      <img
+      <!-- <img
         src={texto.src}
         alt={texto.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={texto.src} type="video/mp4" />
+      </video>
     </section>
 
     <section class="video-section">
@@ -66,30 +69,39 @@ const videoSrc =
       ></iframe>
     </section>
     <section class="image-section">
-      <img
+      <!-- <img
         src={moviles.src}
         alt={moviles.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={moviles.src} type="video/mp4" />
+      </video>
     </section>
 
     <section class="image-section">
-      <img
+      <!-- <img
         src={mapas.src}
         alt={mapas.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={mapas.src} type="video/mp4" />
+      </video>
     </section>
 
     <section class="image-section">
-      <img
+      <!-- <img
         src={footer.src}
         alt={footer.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={footer.src} type="video/mp4" />
+      </video>
     </section>
   </main>
 </Layout>

@@ -1,13 +1,12 @@
 ---
-import { fade } from "astro:transitions";
 import Layout from "../layouts/Layout.astro";
 
 const mosca = {
-  src: "VICIO/1.gif",
+  src: "VICIO/1.mp4",
   alt: "Mosca",
 };
 const texto1 = {
-  src: "VICIO/3.gif",
+  src: "VICIO/3.mp4",
   alt: "Texto1",
 };
 const texto2 = {
@@ -15,7 +14,7 @@ const texto2 = {
   alt: "Texto2",
 };
 const basura = {
-  src: "VICIO/5.gif",
+  src: "VICIO/5.mp4",
   alt: "Basura",
 };
 const texto3 = {
@@ -23,11 +22,11 @@ const texto3 = {
   alt: "Texto3",
 };
 const contrato = {
-  src: "VICIO/7.gif",
+  src: "VICIO/7.mp4",
   alt: "Contrato",
 };
 const premio = {
-  src: "VICIO/8.gif",
+  src: "VICIO/8.mp4",
   alt: "Premio",
 };
 
@@ -42,16 +41,17 @@ const videoSrc =
 >
   <main
     class="main-project"
-    transition:name={`image-vicio-trashy-agreement`}
-    transition:animate={fade({ duration: "0.6s" })}
   >
     <section class="image-section">
-      <img
+      <!-- <img
         src={mosca.src}
         alt={mosca.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={mosca.src} type="video/mp4" />
+      </video>
     </section>
 
     <section class="video-section">
@@ -65,12 +65,15 @@ const videoSrc =
       ></iframe>
     </section>
     <section class="image-section">
-      <img
+      <!-- <img
         src={texto1.src}
         alt={texto1.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={texto1.src} type="video/mp4" />
+      </video>
     </section>
     <section class="image-section">
       <img
@@ -81,12 +84,15 @@ const videoSrc =
       />
     </section>
     <section class="image-section">
-      <img
+      <!-- <img
         src={basura.src}
         alt={basura.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={basura.src} type="video/mp4" />
+      </video>
     </section>
     <section class="image-section">
       <img
@@ -97,20 +103,26 @@ const videoSrc =
       />
     </section>
     <section class="image-section">
-      <img
+      <!-- <img
         src={contrato.src}
         alt={contrato.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={contrato.src} type="video/mp4" />
+      </video>
     </section>
     <section class="image-section">
-      <img
+      <!-- <img
         src={premio.src}
         alt={premio.alt}
         class="full-width-image"
         loading="lazy"
-      />
+      /> -->
+      <video autoplay loop muted playsinline>
+        <source src={premio.src} type="video/mp4" />
+      </video>
     </section>
   </main>
 </Layout>
