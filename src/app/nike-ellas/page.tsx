@@ -41,8 +41,8 @@ const NikePage = () => {
           alt={cabecera.alt}
           className="full-width-image"
           loading="lazy"
-          width={300}
-          height={300}
+          width={3000}
+          height={3000}
         />
       </section>
       <section className="video-section">
@@ -64,8 +64,8 @@ const NikePage = () => {
             alt={image.alt}
             className="full-width-image"
             loading="lazy"
-            width={300}
-            height={300}
+            width={3000}
+            height={3000}
           />
         </section>
       ))}
@@ -76,8 +76,8 @@ const NikePage = () => {
           alt={footer.alt}
           className="full-width-image"
           loading="lazy"
-          width={300}
-          height={300}
+          width={3000}
+          height={3000}
         />
       </section>
     </ProjectLayout>
