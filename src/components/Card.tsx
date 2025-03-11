@@ -20,8 +20,8 @@ const Card: FC<Props> = ({ image, href, alt }) => {
             src={`/${image}.webp`}
             alt={alt}
             className="w-full h-full object-contain"
-            width={300}
-            height={300}
+            width={3000}
+            height={3000}
           />
         </div>
       </a>

@@ -76,8 +76,8 @@ const SinNievePage = () => {
           alt={logos.alt}
           className="full-width-image"
           loading="lazy"
-          width={300}
-          height={300}
+          width={3000}
+          height={3000}
         />
       </section>
 
@@ -93,8 +93,8 @@ const SinNievePage = () => {
           alt={carteles.alt}
           className="full-width-image"
           loading="lazy"
-          width={300}
-          height={300}
+          width={3000}
+          height={3000}
         />
       </section>
 
