@@ -1,0 +1,6 @@
+.svggg {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .svggg:hover {
+    transform: scale(1.5);
+  }
