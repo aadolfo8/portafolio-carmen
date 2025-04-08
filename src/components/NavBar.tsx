@@ -43,7 +43,7 @@ const NavBar: FC<Props> = ({ isMainPage }) => {
          c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
                   ></path>
                 </svg>
-                <h2 className="text-[17px]">creative at David Madrid</h2>
+                <h2 className="text-[17px]">creative at El Ruso de Rocky</h2>
               </div>
 
               <div
@@ -146,7 +146,7 @@ const NavBar: FC<Props> = ({ isMainPage }) => {
          c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
                   ></path>
                 </svg>
-                <h2 className="text-[14px]">creative at David Madrid</h2>
+                <h2 className="text-[14px]">creative at El Ruso de Rocky</h2>
               </div>
               <p className="text-[14px]">/portfolio in process/</p>
             </div>
