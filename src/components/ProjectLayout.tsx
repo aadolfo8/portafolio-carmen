@@ -27,7 +27,7 @@ const ProjectLayout: FC<PropsWithChildren<Props>> = ({
         <meta charSet="UTF-8" />
         <meta name="description" content="Astro description" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/png" href={`/${favicon}`} />
+        <link rel="icon" type="image/png" href={`${isMainPage ? '/favicon.png' : '/${favicon}'}`} />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
