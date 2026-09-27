@@ -13,6 +13,7 @@ export type Project = {
   type: string;
   image: string;
   media: ProjectMedia[];
+  awards?: string[];
   mediaLayout?: "triptych";
 };
 

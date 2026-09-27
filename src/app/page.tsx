@@ -67,7 +67,7 @@ export default function Home() {
       <section className="border-b border-border">
         <div className="flex items-baseline justify-between border-b border-border px-3 py-2">
           <h2 className="label">{es ? "Archivo de escuela" : "School archive"}</h2>
-          <span className="label text-muted-foreground">2021—2024</span>
+          <span className="label text-muted-foreground">2023—2024</span>
         </div>
         {archive.map((project, index) => (
           <Link key={project.id} href={`/projects/${project.id}`} className="group relative block border-b border-border last:border-b-0 hover:z-10 focus-visible:z-10">
@@ -89,7 +89,7 @@ export default function Home() {
           <p className="display border-b border-border p-3 text-4xl md:p-6 md:text-7xl">{es ? "Directora de arte en el Ruso de Rocky." : "Art director at el Ruso de Rocky."}</p>
           <div className="grid md:grid-cols-3">
             <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Formación" : "Education"}</p><p className="text-sm leading-relaxed">{es ? "Máster en Creatividad Integral" : "Master’s in Integrated Creativity"}<br />[Brother Madrid]<br />{es ? "Máster en Diseño Gráfico y Entornos Digitales" : "Master’s in Graphic Design and Digital Environments"}<br />[LABASAD]<br />{es ? "Grado en Publicidad y RR. PP." : "Degree in Advertising and Public Relations"}<br />[Universidad de Murcia]</p></div>
-            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Experiencia" : "Experience"}</p><p className="text-sm leading-relaxed">Portavoz<br />[2020–2023]<br />DAVID Madrid<br />[2024]<br />el Ruso de Rocky<br />[{es ? "2025–Actualidad" : "2025–Present"}]</p></div>
+            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Experiencia" : "Experience"}</p><p className="text-sm leading-relaxed">el Ruso de Rocky<br />[{es ? "2025–Actualidad" : "2025–Present"}]<br />DAVID Madrid<br />[2024]<br />Portavoz<br />[2020–2023]</p></div>
             <div className="p-3 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Marcas" : "Brands"}</p><p className="text-sm leading-relaxed">Burger King, Liga F, Goiko, Netflix, Real Valladolid CF, Universidad Europea, {es ? "entre otros" : "among others"}.</p></div>
           </div>
         </div>
