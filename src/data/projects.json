@@ -17,6 +17,7 @@
     "image": "/BURGER_KING/1.webp",
     "awards": ["4x Shortlist Cannes Lions [Print & Publishing]"],
     "media": [
+      { "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/4WTPn35qYHs?rel=0" },
       { "kind": "image", "src": "/BURGER_KING/1.webp" },
       { "kind": "image", "src": "/BURGER_KING/2.jpg" },
       { "kind": "image", "src": "/BURGER_KING/3.webp" },
@@ -28,7 +29,7 @@
     "client": "Universidad Europea",
     "title": "Creative Campus. Entrar aquí, salir al mundo",
     "year": "2026",
-    "type": "Campaña",
+    "type": "Film",
     "image": "https://i.ytimg.com/vi/54qA5EeYek0/hqdefault.jpg",
     "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/54qA5EeYek0?rel=0" }]
   },

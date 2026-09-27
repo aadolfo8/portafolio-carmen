@@ -70,7 +70,7 @@ export default function Home() {
       <section className="grid border-b border-border md:grid-cols-[1fr_2fr]">
         <div className="relative min-h-[23rem] overflow-hidden border-b border-border sm:min-h-[30rem] md:min-h-[34rem] md:border-r md:border-b-0">
           <h2 className="label relative z-10 p-3">{es ? "Sobre mí" : "About"}</h2>
-          <img src="/carmen-portrait.png" alt="Retrato de Carmen Puche" loading="lazy" className="absolute inset-x-0 bottom-0 h-[calc(100%-3rem)] w-full object-cover object-top mix-blend-multiply" />
+          <img src="/carmen-portrait.png" alt="Retrato de Carmen Puche" loading="lazy" className="absolute inset-x-0 bottom-0 h-[calc(100%-3rem)] w-full object-contain object-bottom mix-blend-multiply" />
         </div>
         <div>
           <p className="display border-b border-border p-3 text-4xl md:p-6 md:text-7xl">{es ? "Directora de arte en el Ruso de Rocky." : "Art director at el Ruso de Rocky."}</p>
