@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { projects, type Project, type ProjectMedia } from "@/data/projects";
+import SiteHeader from "@/components/SiteHeader";
 
 function Media({ item, title, index }: { item: ProjectMedia; title: string; index: number }) {
   if (item.kind === "embed") {
@@ -22,11 +23,7 @@ export default function ProjectView({ project }: { project: Project }) {
 
   return (
     <main className="min-h-dvh">
-      <header className="grid grid-cols-[auto_1fr_auto] border-b border-border bg-background">
-        <Link href="/" className="display flex items-center border-r border-border px-3 py-2 text-xl hover:bg-foreground hover:text-background md:text-2xl">Carmen Puche</Link>
-        <span className="label flex items-center px-3">Directora de arte</span>
-        <Link href="/#trabajos" className="label flex items-center border-l border-border px-3 hover:bg-foreground hover:text-background">Cerrar ×</Link>
-      </header>
+      <SiteHeader />
 
       <section className="grid border-b border-border md:grid-cols-[1fr_18rem]">
         <div className="min-w-0 p-3 md:p-6">
@@ -35,13 +32,13 @@ export default function ProjectView({ project }: { project: Project }) {
         </div>
         <dl className="flex flex-col border-t border-border md:border-t-0 md:border-l">
           <div className="border-b border-border p-3"><dt className="label text-muted-foreground">Tipo</dt><dd className="label mt-2">{project.type}</dd></div>
+          <div className={project.awards?.length ? "border-b border-border p-3" : "p-3"}><dt className="label text-muted-foreground">Año</dt><dd className="label mt-2">{project.year}</dd></div>
           {project.awards && project.awards.length > 0 && (
-            <div className="border-b border-border p-3">
+            <div className="p-3">
               <dt className="label text-muted-foreground">Reconocimientos</dt>
               {project.awards.map((award) => <dd key={award} className="label mt-2 leading-relaxed">{award}</dd>)}
             </div>
           )}
-          <div className="p-3"><dt className="label text-muted-foreground">Año</dt><dd className="label mt-2">{project.year}</dd></div>
         </dl>
       </section>
 
