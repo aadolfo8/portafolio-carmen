@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { projects, projectType, type Project } from "@/data/projects";
 import { useLanguage } from "@/components/LanguageProvider";
+import SiteHeader from "@/components/SiteHeader";
 
 const featured = projects[0];
 const tiles = projects.slice(1, 7);
@@ -24,29 +25,12 @@ function ProjectTile({ project, index, es }: { project: Project; index: number; 
 }
 
 export default function Home() {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
   const es = language === "es";
 
   return (
     <main id="top" className="min-h-dvh">
-      <header className="sticky top-0 z-40 border-b border-border bg-background">
-        <div className="grid grid-cols-[auto_1fr_auto] items-stretch border-b border-border">
-          <a href="#top" className="display flex items-center border-r border-border px-3 text-2xl md:text-3xl">Carmen Puche</a>
-          <div className="flex min-w-0 items-stretch justify-between">
-            <span className="label hidden items-center px-3 text-muted-foreground sm:flex">{es ? "Directora de arte" : "Art director"}</span>
-            <a href="mailto:carmenpuchemartinez@gmail.com" className="label ml-auto flex items-center border-l border-border px-3 hover:bg-foreground hover:text-background">EMAIL</a>
-          </div>
-          <div className="flex items-center justify-end border-l border-border px-1 sm:px-2">
-            <button type="button" onClick={() => setLanguage("es")} aria-pressed={es} className={`label px-1 py-2 sm:px-2 ${es ? "underline" : "text-muted-foreground"}`}>ESP</button>
-            <span className="label text-muted-foreground">|</span>
-            <button type="button" onClick={() => setLanguage("en")} aria-pressed={!es} className={`label px-1 py-2 sm:px-2 ${!es ? "underline" : "text-muted-foreground"}`}>ENG</button>
-          </div>
-        </div>
-        <div className="grid grid-cols-2">
-          <span className="label border-r border-border p-3 text-muted-foreground">{es ? "Madrid, España" : "Madrid, Spain"}</span>
-          <a href="#trabajos" className="label p-3 hover:bg-foreground hover:text-background">{es ? "Trabajos ↓" : "Work ↓"}</a>
-        </div>
-      </header>
+      <SiteHeader home />
 
       <section id="trabajos" className="border-b border-border">
         <Link href={`/projects/${featured.id}`} className="group block border-b border-border">
@@ -84,12 +68,15 @@ export default function Home() {
       </section>
 
       <section className="grid border-b border-border md:grid-cols-[1fr_2fr]">
-        <h2 className="label border-b border-border p-3 md:border-r md:border-b-0">{es ? "Sobre mí" : "About"}</h2>
+        <div className="relative min-h-[23rem] overflow-hidden border-b border-border sm:min-h-[30rem] md:min-h-[34rem] md:border-r md:border-b-0">
+          <h2 className="label relative z-10 p-3">{es ? "Sobre mí" : "About"}</h2>
+          <img src="/carmen-portrait.png" alt="Retrato de Carmen Puche" loading="lazy" className="absolute inset-x-0 bottom-0 h-[calc(100%-3rem)] w-full object-cover object-top mix-blend-multiply" />
+        </div>
         <div>
           <p className="display border-b border-border p-3 text-4xl md:p-6 md:text-7xl">{es ? "Directora de arte en el Ruso de Rocky." : "Art director at el Ruso de Rocky."}</p>
           <div className="grid md:grid-cols-3">
-            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Formación" : "Education"}</p><p className="text-sm leading-relaxed">{es ? "Máster en Creatividad Integral" : "Master’s in Integrated Creativity"}<br />[Brother Madrid]<br />{es ? "Máster en Diseño Gráfico y Entornos Digitales" : "Master’s in Graphic Design and Digital Environments"}<br />[LABASAD]<br />{es ? "Grado en Publicidad y RR. PP." : "Degree in Advertising and Public Relations"}<br />[Universidad de Murcia]</p></div>
-            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Experiencia" : "Experience"}</p><p className="text-sm leading-relaxed">el Ruso de Rocky<br />[{es ? "2025–Actualidad" : "2025–Present"}]<br />DAVID Madrid<br />[2024]<br />Portavoz<br />[2020–2023]</p></div>
+            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Formación" : "Education"}</p><p className="text-sm leading-relaxed">{es ? "Máster en Creatividad Integral" : "Master’s in Integrated Creativity"}<br /><span className="text-muted-foreground">[Brother Madrid]</span><br />{es ? "Máster en Diseño Gráfico y Entornos Digitales" : "Master’s in Graphic Design and Digital Environments"}<br /><span className="text-muted-foreground">[LABASAD]</span><br />{es ? "Grado en Publicidad y RR. PP." : "Degree in Advertising and Public Relations"}<br /><span className="text-muted-foreground">[Universidad de Murcia]</span></p></div>
+            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Experiencia" : "Experience"}</p><p className="text-sm leading-relaxed">el Ruso de Rocky<br /><span className="text-muted-foreground">[{es ? "2025–Actualidad" : "2025–Present"}]</span><br />DAVID Madrid<br /><span className="text-muted-foreground">[2024]</span><br />Portavoz<br /><span className="text-muted-foreground">[2020–2023]</span></p></div>
             <div className="p-3 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Marcas" : "Brands"}</p><p className="text-sm leading-relaxed">Burger King, Liga F, Goiko, Netflix, Real Valladolid CF, Universidad Europea, {es ? "entre otros" : "among others"}.</p></div>
           </div>
         </div>
