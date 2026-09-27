@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { projects, type Project, type ProjectMedia } from "@/data/projects";
+import { projects, projectType, type Project, type ProjectMedia } from "@/data/projects";
 import { useLanguage } from "@/components/LanguageProvider";
 
 function Media({ item, title, index }: { item: ProjectMedia; title: string; index: number }) {
@@ -42,7 +42,7 @@ export default function ProjectView({ project }: { project: Project }) {
           <h1 className="display break-words text-[clamp(3rem,9vw,10rem)]">{project.title}</h1>
         </div>
         <dl className="grid grid-cols-2 border-t border-border md:grid-cols-1 md:border-t-0 md:border-l">
-          <div className="border-r border-border p-3 md:border-r-0 md:border-b"><dt className="label text-muted-foreground">{es ? "Tipo" : "Type"}</dt><dd className="label mt-2">{project.type}</dd></div>
+          <div className="border-r border-border p-3 md:border-r-0 md:border-b"><dt className="label text-muted-foreground">{es ? "Tipo" : "Type"}</dt><dd className="label mt-2">{projectType(project.type, es)}</dd></div>
           <div className="p-3"><dt className="label text-muted-foreground">{es ? "Año" : "Year"}</dt><dd className="label mt-2">{project.year}</dd></div>
         </dl>
       </section>

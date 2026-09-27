@@ -1,17 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { projects, type Project } from "@/data/projects";
+import { projects, projectType, type Project } from "@/data/projects";
 import { useLanguage } from "@/components/LanguageProvider";
 
 const featured = projects[0];
 const tiles = projects.slice(1, 7);
 const archive = projects.slice(7);
-
-function projectType(type: string, es: boolean) {
-  if (es) return type;
-  return ({ Campaña: "Campaign", "Spot TV & RRSS": "TV & social film" } as Record<string, string>)[type] ?? type;
-}
 
 function ProjectTile({ project, index, es }: { project: Project; index: number; es: boolean }) {
   return (
@@ -35,18 +30,16 @@ export default function Home() {
   return (
     <main id="top" className="min-h-dvh">
       <header className="sticky top-0 z-40 border-b border-border bg-background">
-        <div className="grid grid-cols-[auto_1fr] items-stretch border-b border-border">
+        <div className="grid grid-cols-[auto_1fr_auto] items-stretch border-b border-border">
           <a href="#top" className="display flex items-center border-r border-border px-3 text-2xl md:text-3xl">Carmen Puche</a>
-          <div className="grid grid-cols-[1fr_auto]">
-            <div className="grid grid-cols-[auto_1fr]">
-              <a href="mailto:carmenpuchemartinez@gmail.com" className="label flex items-center border-r border-border px-3 py-2 hover:bg-foreground hover:text-background">{es ? "Contacto" : "Contact"}</a>
-              <span className="label hidden items-center px-3 py-2 text-muted-foreground lg:flex">carmenpuchemartinez@gmail.com</span>
-            </div>
-            <div className="flex items-center justify-end border-l border-border px-2">
-              <button type="button" onClick={() => setLanguage("es")} aria-pressed={es} className={`label px-2 py-2 ${es ? "underline" : "text-muted-foreground"}`}>ESP</button>
-              <span className="label text-muted-foreground">|</span>
-              <button type="button" onClick={() => setLanguage("en")} aria-pressed={!es} className={`label px-2 py-2 ${!es ? "underline" : "text-muted-foreground"}`}>ENG</button>
-            </div>
+          <div className="flex min-w-0 items-stretch justify-between">
+            <span className="label hidden items-center px-3 text-muted-foreground sm:flex">{es ? "Directora de arte" : "Art director"}</span>
+            <a href="mailto:carmenpuchemartinez@gmail.com" className="label ml-auto flex items-center border-l border-border px-3 hover:bg-foreground hover:text-background">EMAIL</a>
+          </div>
+          <div className="flex items-center justify-end border-l border-border px-1 sm:px-2">
+            <button type="button" onClick={() => setLanguage("es")} aria-pressed={es} className={`label px-1 py-2 sm:px-2 ${es ? "underline" : "text-muted-foreground"}`}>ESP</button>
+            <span className="label text-muted-foreground">|</span>
+            <button type="button" onClick={() => setLanguage("en")} aria-pressed={!es} className={`label px-1 py-2 sm:px-2 ${!es ? "underline" : "text-muted-foreground"}`}>ENG</button>
           </div>
         </div>
         <div className="grid grid-cols-2">
@@ -77,8 +70,8 @@ export default function Home() {
           <span className="label text-muted-foreground">2021—2024</span>
         </div>
         {archive.map((project, index) => (
-          <Link key={project.id} href={`/projects/${project.id}`} className="group relative block border-b border-border last:border-b-0">
-            <img src={project.image} alt="" aria-hidden="true" loading="lazy" className="pointer-events-none fixed top-1/2 left-[55%] z-50 hidden aspect-[4/3] w-80 -translate-y-1/2 object-cover opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 md:block" />
+          <Link key={project.id} href={`/projects/${project.id}`} className="group relative block border-b border-border last:border-b-0 hover:z-10 focus-visible:z-10">
+            <img src={project.image} alt="" aria-hidden="true" loading="lazy" className="pointer-events-none absolute top-1/2 left-[55%] z-10 hidden aspect-[4/3] w-80 -translate-y-1/2 object-cover opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 md:block" />
             <div className="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr_14rem_10rem_4rem]">
               <span className="label flex items-center border-r border-border px-3 py-4 text-muted-foreground">{String(index + 8).padStart(2, "0")}</span>
               <span className="flex flex-col justify-center px-3 py-3"><span className="label text-muted-foreground">{project.client}</span><span className="display text-3xl md:text-5xl">{project.title}</span></span>
@@ -95,15 +88,15 @@ export default function Home() {
         <div>
           <p className="display border-b border-border p-3 text-4xl md:p-6 md:text-7xl">{es ? "Directora de arte en el Ruso de Rocky." : "Art director at el Ruso de Rocky."}</p>
           <div className="grid md:grid-cols-3">
-            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Formación" : "Education"}</p><p className="text-sm leading-relaxed">{es ? "Máster en Creatividad Integral" : "Master’s in Integrated Creativity"}<br />[ Brother Madrid ]<br />{es ? "Máster en Diseño Gráfico y Entornos Digitales" : "Master’s in Graphic Design and Digital Environments"}<br />[ LABASAD ]<br />{es ? "Grado en Publicidad y RR. PP." : "Degree in Advertising and Public Relations"}<br />[ Universidad de Murcia ]</p></div>
-            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Experiencia" : "Experience"}</p><p className="text-sm leading-relaxed">Portavoz<br />[ 2020–2023 ]<br />DAVID Madrid<br />[ 2024 ]<br />el Ruso de Rocky<br />[ {es ? "2025–Actualidad" : "2025–Present"} ]</p></div>
+            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Formación" : "Education"}</p><p className="text-sm leading-relaxed">{es ? "Máster en Creatividad Integral" : "Master’s in Integrated Creativity"}<br />[Brother Madrid]<br />{es ? "Máster en Diseño Gráfico y Entornos Digitales" : "Master’s in Graphic Design and Digital Environments"}<br />[LABASAD]<br />{es ? "Grado en Publicidad y RR. PP." : "Degree in Advertising and Public Relations"}<br />[Universidad de Murcia]</p></div>
+            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Experiencia" : "Experience"}</p><p className="text-sm leading-relaxed">Portavoz<br />[2020–2023]<br />DAVID Madrid<br />[2024]<br />el Ruso de Rocky<br />[{es ? "2025–Actualidad" : "2025–Present"}]</p></div>
             <div className="p-3 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Marcas" : "Brands"}</p><p className="text-sm leading-relaxed">Burger King, Liga F, Goiko, Netflix, Real Valladolid CF, Universidad Europea, {es ? "entre otros" : "among others"}.</p></div>
           </div>
         </div>
       </section>
       <footer>
         <a href="mailto:carmenpuchemartinez@gmail.com" className="display block overflow-hidden border-b border-border px-2 py-6 text-[clamp(1.35rem,6.7vw,7rem)] hover:bg-foreground hover:text-background">carmenpuchemartinez@gmail.com</a>
-        <div className="grid md:grid-cols-2"><span className="label border-b border-border p-3 md:border-r md:border-b-0">© {new Date().getFullYear()} Carmen Puche</span><a href="mailto:carmenpuchemartinez@gmail.com" className="label p-3 hover:bg-foreground hover:text-background">{es ? "Contacto →" : "Contact →"}</a></div>
+        <div className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr]"><span className="label col-span-2 border-b border-border p-3 md:col-span-1 md:border-r md:border-b-0">© {new Date().getFullYear()} Carmen Puche</span><a href="https://www.linkedin.com/in/carmen-puche" target="_blank" rel="noopener noreferrer" className="label border-r border-border p-3 hover:bg-foreground hover:text-background">LinkedIn ↗</a><a href="https://www.instagram.com/carmenpuche_/" target="_blank" rel="noopener noreferrer" className="label p-3 hover:bg-foreground hover:text-background">Instagram ↗</a></div>
       </footer>
     </main>
   );

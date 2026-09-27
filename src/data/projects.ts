@@ -18,6 +18,16 @@ export type Project = {
 
 export const projects: Project[] = projectData as Project[];
 
+export function projectType(type: string, es: boolean): string {
+  if (es) return type;
+  return ({
+    Campaña: "Campaign",
+    "Spot TV & RRSS": "TV & social film",
+    "Spot & Gráfica": "Film & Print",
+    Gráfica: "Print",
+  } as Record<string, string>)[type] ?? type;
+}
+
 export function getProject(id: string): Project | undefined {
   return projects.find((project) => project.id === id);
 }
