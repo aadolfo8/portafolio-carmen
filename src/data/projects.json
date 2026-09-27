@@ -36,7 +36,11 @@
     "year": "2026",
     "type": "Film",
     "image": "/CREATIVE_CAMPUS/cover.webp",
-    "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/54qA5EeYek0?rel=0" }]
+    "media": [
+      { "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/54qA5EeYek0?rel=0" },
+      { "kind": "image", "src": "/CREATIVE_CAMPUS/2.jpg" },
+      { "kind": "image", "src": "/CREATIVE_CAMPUS/3.jpg" }
+    ]
   },
   {
     "id": "goiko-risketos",
@@ -67,7 +71,11 @@
     "type": "Spot TV & RRSS",
     "image": "/QUE_VIENE/cover.webp",
     "awards": ["1x Sol de Plata [Film]"],
-    "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/dAcFVJ1lJrs?rel=0" }]
+    "media": [
+      { "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/dAcFVJ1lJrs?rel=0" },
+      { "kind": "image", "src": "/QUE_VIENE/2.jpg" },
+      { "kind": "video", "src": "/QUE_VIENE/3.mp4", "controls": true }
+    ]
   },
   {
     "id": "vicio",
@@ -90,7 +98,7 @@
   },
   {
     "id": "sin-nieve",
-    "client": "EFE:Verde",
+    "client": "Proyecto personal",
     "title": "Sin nieve no hay sociedad",
     "year": "2024",
     "type": "Campaña",
