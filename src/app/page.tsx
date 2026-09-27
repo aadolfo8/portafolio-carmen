@@ -55,7 +55,7 @@ export default function Home() {
         </div>
         {archive.map((project, index) => (
           <Link key={project.id} href={`/projects/${project.id}`} className="group relative block border-b border-border last:border-b-0 hover:z-10 focus-visible:z-10">
-            <img src={project.image} alt="" aria-hidden="true" loading="lazy" className="pointer-events-none absolute top-1/2 left-[55%] z-10 hidden aspect-[4/3] w-80 -translate-y-1/2 object-cover opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 md:block" />
+            <img src={project.image} alt="" aria-hidden="true" loading="lazy" className="pointer-events-none absolute top-1/2 right-[calc(28rem+1rem)] z-10 hidden aspect-[4/3] w-64 -translate-y-1/2 object-cover opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 md:block" />
             <div className="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr_14rem_10rem_4rem]">
               <span className="label flex items-center border-r border-border px-3 py-4 text-muted-foreground">{String(index + 8).padStart(2, "0")}</span>
               <span className="flex flex-col justify-center px-3 py-3"><span className="label text-muted-foreground">{project.client}</span><span className="display text-3xl md:text-5xl">{project.title}</span></span>
@@ -68,9 +68,9 @@ export default function Home() {
       </section>
 
       <section className="grid border-b border-border min-[1080px]:grid-cols-[28%_minmax(0,1fr)]">
-        <div className="relative min-h-[23rem] overflow-hidden border-b border-border sm:min-h-[30rem] min-[1080px]:min-h-[30rem] min-[1080px]:border-r min-[1080px]:border-b-0">
-          <h2 className="label relative z-10 p-3">{es ? "Sobre mí" : "About"}</h2>
-          <img src="/carmen-portrait.png" alt="Retrato de Carmen Puche" loading="lazy" className="absolute inset-x-0 bottom-0 h-[calc(100%-3rem)] w-full object-contain object-bottom mix-blend-multiply" />
+        <div className="relative flex flex-col justify-end overflow-hidden border-b border-border min-[1080px]:min-h-[30rem] min-[1080px]:border-r min-[1080px]:border-b-0">
+          <h2 className="label absolute top-0 left-0 z-10 p-3">{es ? "Sobre mí" : "About"}</h2>
+          <img src="/carmen-portrait.png" alt="Retrato de Carmen Puche" loading="lazy" className="block h-auto w-full mix-blend-multiply" />
         </div>
         <div>
           <p className="display border-b border-border p-3 text-4xl md:p-6 md:text-7xl">{es ? "Directora de arte en el Ruso de Rocky." : "Art director at el Ruso de Rocky."}</p>
