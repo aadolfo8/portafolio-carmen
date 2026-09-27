@@ -3,6 +3,7 @@ import projectData from "./projects.json";
 export type ProjectMedia = {
   kind: "image" | "video" | "embed";
   src: string;
+  controls?: boolean;
 };
 
 export type Project = {

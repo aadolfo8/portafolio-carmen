@@ -67,8 +67,8 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="grid border-b border-border md:grid-cols-[1fr_2fr]">
-        <div className="relative min-h-[23rem] overflow-hidden border-b border-border sm:min-h-[30rem] md:min-h-[34rem] md:border-r md:border-b-0">
+      <section className="grid border-b border-border min-[1080px]:grid-cols-[28%_minmax(0,1fr)]">
+        <div className="relative min-h-[23rem] overflow-hidden border-b border-border sm:min-h-[30rem] min-[1080px]:min-h-[30rem] min-[1080px]:border-r min-[1080px]:border-b-0">
           <h2 className="label relative z-10 p-3">{es ? "Sobre mí" : "About"}</h2>
           <img src="/carmen-portrait.png" alt="Retrato de Carmen Puche" loading="lazy" className="absolute inset-x-0 bottom-0 h-[calc(100%-3rem)] w-full object-contain object-bottom mix-blend-multiply" />
         </div>
