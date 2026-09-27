@@ -6,7 +6,12 @@
     "year": "2026",
     "type": "Film",
     "image": "https://i.ytimg.com/vi/kB3LR0wQ5oQ/maxresdefault.jpg",
-    "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/kB3LR0wQ5oQ?rel=0" }]
+    "media": [
+      { "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/kB3LR0wQ5oQ?rel=0" },
+      { "kind": "image", "src": "/REFLEJOS/2.png" },
+      { "kind": "video", "src": "/REFLEJOS/3.mp4", "controls": true },
+      { "kind": "image", "src": "/REFLEJOS/4.png" }
+    ]
   },
   {
     "id": "burger-king-street-view",
@@ -14,7 +19,7 @@
     "title": "Hungry Street View Drivers",
     "year": "2026",
     "type": "Digital campaign",
-    "image": "/BURGER_KING/1.webp",
+    "image": "/BURGER_KING/cover.webp",
     "awards": ["4x Shortlist Cannes Lions [Print & Publishing]"],
     "media": [
       { "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/4WTPn35qYHs?rel=0" },
@@ -30,7 +35,7 @@
     "title": "Creative Campus. Entrar aquí, salir al mundo",
     "year": "2026",
     "type": "Film",
-    "image": "https://i.ytimg.com/vi/54qA5EeYek0/hqdefault.jpg",
+    "image": "/CREATIVE_CAMPUS/cover.webp",
     "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/54qA5EeYek0?rel=0" }]
   },
   {
@@ -60,7 +65,7 @@
     "title": "Que viene, que viene",
     "year": "2025",
     "type": "Spot TV & RRSS",
-    "image": "https://i.ytimg.com/vi/dAcFVJ1lJrs/maxresdefault.jpg",
+    "image": "/QUE_VIENE/cover.webp",
     "awards": ["1x Sol de Plata [Film]"],
     "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/dAcFVJ1lJrs?rel=0" }]
   },
@@ -70,7 +75,7 @@
     "title": "Trashy Agreement",
     "year": "2024",
     "type": "Campaña",
-    "image": "/VICIO.webp",
+    "image": "/VICIO/cover.webp",
     "awards": ["1x Oro Club de Creativos [Jóvenes Talentos]"],
     "media": [
       { "kind": "video", "src": "/VICIO/1.mp4" },

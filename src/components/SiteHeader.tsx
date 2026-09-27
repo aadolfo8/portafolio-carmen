@@ -9,10 +9,10 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background">
-      <div className={home ? "grid grid-cols-[auto_1fr_auto] items-stretch border-b border-border" : "grid grid-cols-[auto_1fr_auto] items-stretch"}>
+      <div className={home ? "grid grid-cols-[auto_1fr_auto] items-stretch border-b border-border" : "grid grid-cols-[auto_1fr_auto] items-stretch border-b border-border md:border-b-0"}>
         <Link href={home ? "#top" : "/"} className="display flex items-center border-r border-border px-3 py-2 text-2xl hover:bg-foreground hover:text-background md:text-3xl">Carmen Puche</Link>
         <div className="flex min-w-0 items-stretch justify-between">
-          <span className="label hidden items-center px-3 text-muted-foreground lg:flex">Directora de arte</span>
+          <span className="label hidden items-center px-3 text-muted-foreground md:flex">Directora de arte</span>
           <a href="mailto:carmenpuchemartinez@gmail.com" className="label ml-auto hidden items-center border-l border-border px-3 hover:bg-foreground hover:text-background md:flex">carmenpuchemartinez@gmail.com</a>
         </div>
         {home ? (
@@ -25,10 +25,11 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
           <Link href="/#trabajos" className="label flex items-center border-l border-border px-3 hover:bg-foreground hover:text-background">Cerrar ×</Link>
         )}
       </div>
-      <a href="mailto:carmenpuchemartinez@gmail.com" className={`label block px-3 py-2 hover:bg-foreground hover:text-background md:hidden ${home ? "" : "border-t border-border"}`}>carmenpuchemartinez@gmail.com</a>
+      <span className="label block border-b border-border px-3 py-2 text-muted-foreground md:hidden">Directora de arte</span>
+      <a href="mailto:carmenpuchemartinez@gmail.com" className={`label block px-3 py-2 hover:bg-foreground hover:text-background md:hidden ${home ? "border-b border-border" : ""}`}>carmenpuchemartinez@gmail.com</a>
       {home && (
         <div className="grid grid-cols-2">
-          <a href="#trabajos" className="label border-r border-border p-3 hover:bg-foreground hover:text-background">{es ? "Trabajos ↓" : "Work ↓"}</a>
+          <span className="label border-r border-border p-3">{es ? "Trabajos" : "Work"}</span>
           <span className="label p-3 text-muted-foreground">Madrid</span>
         </div>
       )}

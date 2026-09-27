@@ -13,6 +13,9 @@ function Media({ item, title, index }: { item: ProjectMedia; title: string; inde
     );
   }
   if (item.kind === "video") {
+    if (item.controls) {
+      return <video controls playsInline preload="metadata" className="block h-auto w-full"><source src={item.src} type="video/mp4" /></video>;
+    }
     return <video autoPlay loop muted playsInline preload="metadata" className="block h-auto w-full"><source src={item.src} type="video/mp4" /></video>;
   }
   return <img src={item.src} alt={`${title}, pieza ${index + 1}`} loading={index === 0 ? "eager" : "lazy"} className="block h-auto w-full" />;
