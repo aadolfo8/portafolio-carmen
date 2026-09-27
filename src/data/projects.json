@@ -1,0 +1,220 @@
+[
+  {
+    "id": "liga-f-reflejos",
+    "client": "Liga F",
+    "title": "Reflejos",
+    "year": "2026",
+    "type": "Film",
+    "image": "https://i.ytimg.com/vi/kB3LR0wQ5oQ/maxresdefault.jpg",
+    "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/kB3LR0wQ5oQ?rel=0" }]
+  },
+  {
+    "id": "burger-king-street-view",
+    "client": "Burger King",
+    "title": "Hungry Street View Drivers",
+    "year": "2026",
+    "type": "Digital campaign",
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0b3757251767413.6a3e699c45674.jpg",
+    "media": [{ "kind": "image", "src": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0b3757251767413.6a3e699c45674.jpg" }]
+  },
+  {
+    "id": "universidad-europea",
+    "client": "Universidad Europea",
+    "title": "Creative Campus. Entrar aquí, salir al mundo",
+    "year": "2026",
+    "type": "Campaña",
+    "image": "https://i.ytimg.com/vi/54qA5EeYek0/hqdefault.jpg",
+    "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/54qA5EeYek0?rel=0" }]
+  },
+  {
+    "id": "goiko-risketos",
+    "client": "Goiko x Risketos",
+    "title": "Smac & Cheese",
+    "year": "2025",
+    "type": "Branded product",
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/dddda1246402629.69c417f80714e.gif",
+    "media": [{ "kind": "image", "src": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/dddda1246402629.69c417f80714e.gif" }]
+  },
+  {
+    "id": "liga-f-que-viene",
+    "client": "Liga F",
+    "title": "Que viene, que viene",
+    "year": "2025",
+    "type": "Spot TV & RRSS",
+    "image": "https://i.ytimg.com/vi/dAcFVJ1lJrs/maxresdefault.jpg",
+    "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/dAcFVJ1lJrs?rel=0" }]
+  },
+  {
+    "id": "vicio",
+    "client": "VICIO",
+    "title": "Trashy Agreement",
+    "year": "2024",
+    "type": "Campaña",
+    "image": "/VICIO.webp",
+    "media": [
+      { "kind": "video", "src": "/VICIO/1.mp4" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/934956545?h=02e8f4c91b&title=0&byline=0&portrait=0" },
+      { "kind": "video", "src": "/VICIO/3.mp4" },
+      { "kind": "image", "src": "/VICIO/4.png" },
+      { "kind": "video", "src": "/VICIO/5.mp4" },
+      { "kind": "image", "src": "/VICIO/6.png" },
+      { "kind": "video", "src": "/VICIO/7.mp4" },
+      { "kind": "video", "src": "/VICIO/8.mp4" }
+    ]
+  },
+  {
+    "id": "sin-nieve",
+    "client": "",
+    "title": "Sin nieve no hay sociedad",
+    "year": "2024",
+    "type": "Campaña",
+    "image": "/SIN_NIEVE.webp",
+    "media": [
+      { "kind": "video", "src": "/NIEVE/1.mp4" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/950819241?h=20cae1ccf9&title=0&byline=0&portrait=0" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/950726937?h=784c0cf346&title=0&byline=0&portrait=0" },
+      { "kind": "image", "src": "/NIEVE/4.png" },
+      { "kind": "video", "src": "/NIEVE/5.mp4" },
+      { "kind": "image", "src": "/NIEVE/6.webp" },
+      { "kind": "video", "src": "/NIEVE/7.mp4" },
+      { "kind": "video", "src": "/NIEVE/8.mp4" },
+      { "kind": "video", "src": "/NIEVE/9.mp4" }
+    ]
+  },
+  {
+    "id": "notco",
+    "client": "NotCo",
+    "title": "Resaca off the map",
+    "year": "2024",
+    "type": "Campaña",
+    "image": "/RESACA.webp",
+    "media": [
+      { "kind": "video", "src": "/RESACA/1.mp4" },
+      { "kind": "image", "src": "/RESACA/2.gif" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/943596433?h=80bf2d2700&title=0&byline=0&portrait=0" },
+      { "kind": "image", "src": "/RESACA/4.png" }
+    ]
+  },
+  {
+    "id": "spotify-vpn",
+    "client": "Spotify",
+    "title": "VPN Generator",
+    "year": "2023",
+    "type": "Digital",
+    "image": "/SPOTIFY.webp",
+    "media": [
+      { "kind": "video", "src": "/VPN/1.mp4" },
+      { "kind": "video", "src": "/VPN/2.mp4" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/936601328?h=12cb3368ef&title=0&byline=0&portrait=0" },
+      { "kind": "video", "src": "/VPN/4.mp4" },
+      { "kind": "video", "src": "/VPN/5.mp4" },
+      { "kind": "video", "src": "/VPN/6.mp4" }
+    ]
+  },
+  {
+    "id": "zalando",
+    "client": "Zalando",
+    "title": "Dress they up",
+    "year": "2023",
+    "type": "Campaña",
+    "image": "/ZALANDO.webp",
+    "media": [
+      { "kind": "video", "src": "/ZALANDO/1.mp4" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/949532692?h=13f3f92664&title=0&byline=0&portrait=0" },
+      { "kind": "video", "src": "/ZALANDO/3.mp4" },
+      { "kind": "video", "src": "/ZALANDO/4.mp4" },
+      { "kind": "image", "src": "/ZALANDO/5.webp" }
+    ]
+  },
+  {
+    "id": "nike",
+    "client": "Nike",
+    "title": "Ellas",
+    "year": "2023",
+    "type": "Film",
+    "image": "/NIKE.webp",
+    "media": [
+      { "kind": "image", "src": "/NIKE/1.png" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/951917982?h=e9b4b62249&title=0&byline=0&portrait=0" },
+      { "kind": "image", "src": "/NIKE/3.webp" },
+      { "kind": "image", "src": "/NIKE/4.webp" },
+      { "kind": "image", "src": "/NIKE/5.webp" },
+      { "kind": "image", "src": "/NIKE/6.png" }
+    ]
+  },
+  {
+    "id": "audible",
+    "client": "Audible",
+    "title": "Hazlo más fácil",
+    "year": "2023",
+    "type": "Campaña",
+    "image": "/AUDIBLE.webp",
+    "media": [
+      { "kind": "video", "src": "/AUDIBLE/1.mp4" },
+      { "kind": "image", "src": "/AUDIBLE/2.png" },
+      { "kind": "image", "src": "/AUDIBLE/3.webp" },
+      { "kind": "image", "src": "/AUDIBLE/4.webp" },
+      { "kind": "image", "src": "/AUDIBLE/5.webp" },
+      { "kind": "image", "src": "/AUDIBLE/6.webp" },
+      { "kind": "image", "src": "/AUDIBLE/7.png" }
+    ]
+  },
+  {
+    "id": "durex",
+    "client": "Durex",
+    "title": "XL",
+    "year": "2022",
+    "type": "Campaña",
+    "image": "/DUREX.webp",
+    "mediaLayout": "triptych",
+    "media": [
+      { "kind": "image", "src": "/DUREX/1.webp" },
+      { "kind": "image", "src": "/DUREX/2.webp" },
+      { "kind": "image", "src": "/DUREX/3.webp" }
+    ]
+  },
+  {
+    "id": "spotify-familiar",
+    "client": "Spotify",
+    "title": "Plan Familiar",
+    "year": "2022",
+    "type": "Campaña",
+    "image": "/PLAN_FAMILIAR.webp",
+    "media": [
+      { "kind": "video", "src": "/PLAN_FAMILIAR/1.mp4" },
+      { "kind": "image", "src": "/PLAN_FAMILIAR/2.webp" },
+      { "kind": "video", "src": "/PLAN_FAMILIAR/3.mp4" },
+      { "kind": "image", "src": "/PLAN_FAMILIAR/4.webp" }
+    ]
+  },
+  {
+    "id": "giffgaff",
+    "client": "Giffgaff",
+    "title": "Thief Shop",
+    "year": "2021",
+    "type": "Campaña",
+    "image": "/GIFFGAFF.webp",
+    "media": [
+      { "kind": "video", "src": "/THIEF_SHOP/1.mp4" },
+      { "kind": "image", "src": "/THIEF_SHOP/2.webp" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/945923270?badge=0&autopause=0&player_id=0&app_id=58479" },
+      { "kind": "video", "src": "/THIEF_SHOP/4.mp4" },
+      { "kind": "video", "src": "/THIEF_SHOP/5.mp4" }
+    ]
+  },
+  {
+    "id": "dgtxapple-familiar-voices",
+    "client": "DGT x Apple",
+    "title": "Familiar Voices",
+    "year": "—",
+    "type": "Campaña",
+    "image": "/FAMILIAR_VOICES.webp",
+    "media": [
+      { "kind": "video", "src": "/VOICES/1.mp4" },
+      { "kind": "video", "src": "/VOICES/2.mp4" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/943601539?h=e94a00af9c&title=0&byline=0&portrait=0" },
+      { "kind": "video", "src": "/VOICES/4.mp4" },
+      { "kind": "video", "src": "/VOICES/5.mp4" }
+    ]
+  }
+]
