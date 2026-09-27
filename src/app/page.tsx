@@ -1,137 +1,110 @@
-import ProjectLayout from "@/components/ProjectLayout";
-import Card from "../components/Card";
+"use client";
 
-const projects = [
-  {
-    image: "VICIO",
-    href: "vicio-trashy-agreement",
-    alt: "Proyecto Vicio",
-  },
-  {
-    image: "SIN_NIEVE",
-    href: "sin-nieve-no-hay-sociedad",
-    alt: "Proyecto Sin Nieve",
-  },
-  {
-    image: "RESACA",
-    href: "notco-resaca-off-the-map",
-    alt: "Proyecto Resaca",
-  },
-  {
-    image: "SPOTIFY",
-    href: "spotify-vpn-generator",
-    alt: "Proyecto Spotify",
-  },
-  {
-    image: "ZALANDO",
-    href: "zalando-dress-they-up",
-    alt: "Proyecto Zalando",
-  },
-  {
-    image: "NIKE",
-    href: "nike-ellas",
-    alt: "Proyecto Nike",
-  },
-  {
-    image: "AUDIBLE",
-    href: "audible-hazlo-mas-facil",
-    alt: "Proyecto Audible",
-  },
-  {
-    image: "DUREX",
-    href: "durex-xl",
-    alt: "Proyecto Durex",
-  },
-  {
-    image: "PLAN_FAMILIAR",
-    href: "spotify-plan-familiar",
-    alt: "Proyecto Plan Familiar",
-  },
-  {
-    image: "FAMILIAR_VOICES",
-    href: "dgtxapple-familiar-voices",
-    alt: "Proyecto Familiar Voices",
-  },
-  {
-    image: "GIFFGAFF",
-    href: "giffgaff-thief-shop",
-    alt: "Proyecto Giffgaff",
-  },
-];
+import Link from "next/link";
+import { projects, type Project } from "@/data/projects";
+import { useLanguage } from "@/components/LanguageProvider";
+
+const featured = projects[0];
+const tiles = projects.slice(1, 7);
+const archive = projects.slice(7);
+
+function projectType(type: string, es: boolean) {
+  if (es) return type;
+  return ({ Campaña: "Campaign", "Spot TV & RRSS": "TV & social film" } as Record<string, string>)[type] ?? type;
+}
+
+function ProjectTile({ project, index, es }: { project: Project; index: number; es: boolean }) {
+  return (
+    <Link href={`/projects/${project.id}`} className="group border-b border-border md:border-r">
+      <div className="aspect-square overflow-hidden bg-secondary">
+        <img src={project.image} alt={`${project.client} — ${project.title}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+      </div>
+      <div className="grid grid-cols-[3rem_1fr_auto] border-t border-border">
+        <span className="label border-r border-border p-3 text-muted-foreground">{String(index + 1).padStart(2, "0")}</span>
+        <span className="p-3"><span className="label flex justify-between gap-3 text-muted-foreground"><span>{project.client}</span><span>{project.year}</span></span><span className="display mt-1 block text-2xl md:text-3xl">{project.title}</span></span>
+        <span className="label p-3">+</span>
+      </div>
+    </Link>
+  );
+}
 
 export default function Home() {
-  return (
-    <ProjectLayout
-      title="Carmen Puche"
-      description="Creativa"
-      isMainPage={true}
-    >
-      <main className="main-page mx-auto max-w-screen-2xl flex flex-col items-center w-full px-4 mb-10 pb-4 relative bottom-7">
-        <section
-          aria-label="Proyectos"
-          className="grid gap-x-6 gap-y-3 xxs:grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
-        >
-          {projects.map((project) => (
-            <Card
-              key={project.alt}
-              image={project.image}
-              href={project.href}
-              alt={project.alt}
-            />
-          ))}
+  const { language, setLanguage } = useLanguage();
+  const es = language === "es";
 
-          <div className="justify-end items-end flex-col hidden xs:flex">
-            <div className="flex justify-end items-end gap-3">
-              <a
-                href="https://www.linkedin.com/in/carmen-puche/"
-                className="svggg transition-transform duration-300 ease-in-out"
-                target="_blank"
-              >
-                <svg
-                  width="17"
-                  height="17"
-                  viewBox="0 0 17 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.00046 4.00091C3.10528 4.00091 4.00092 3.10528 4.00092 2.00046C4.00092 0.895635 3.10528 0 2.00046 0C0.895635 0 0 0.895635 0 2.00046C0 3.10528 0.895635 4.00091 2.00046 4.00091Z"
-                    fill="black"
-                    fillOpacity="0.8"
-                  ></path>
-                  <path
-                    d="M5.8899 5.51681V16.6153H9.33584V11.1269C9.33584 9.67864 9.6083 8.27612 11.404 8.27612C13.1749 8.27612 13.1969 9.93189 13.1969 11.2183V16.6162H16.6446V10.5298C16.6446 7.54012 16.001 5.24252 12.5066 5.24252C10.8289 5.24252 9.7043 6.16321 9.24441 7.03452H9.19778V5.51681H5.8899ZM0.274353 5.51681H3.72578V16.6153H0.274353V5.51681Z"
-                    fill="black"
-                    fillOpacity="0.8"
-                  ></path>
-                </svg>
-              </a>
-              <a
-                href="https://www.behance.net/carmenpuche_#"
-                className="svggg transition-transform duration-300 ease-in-out"
-                target="_blank"
-              >
-                <svg
-                  width="23"
-                  height="14"
-                  viewBox="0 0 23 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.9236 0.907181H20.6272V2.2297H14.9236V0.907181ZM9.20861 6.13987C10.4694 5.56332 11.1298 4.68619 11.1298 3.33089C11.1298 0.650329 9.0428 0 6.63272 0H0V13.4547H6.81855C9.37443 13.4547 11.7731 12.2797 11.7731 9.54726C11.7731 7.85859 10.9383 6.60985 9.20861 6.13987ZM3.09336 2.29528H5.99518C7.11302 2.29528 8.1165 2.59312 8.1165 3.83366C8.1165 4.97583 7.33601 5.43489 6.22961 5.43489H3.09336V2.29528ZM6.39543 11.1704H3.0905V7.46512H6.46118C7.82203 7.46512 8.68257 8.00888 8.68257 9.38605C8.68257 10.7414 7.65621 11.1704 6.39543 11.1704ZM22.8571 8.72479C22.8571 5.84203 21.0932 3.44018 17.9026 3.44018C14.8007 3.44018 12.6908 5.67262 12.6908 8.59909C12.6908 11.6321 14.6892 13.7143 17.9026 13.7143C20.3356 13.7143 21.9108 12.6677 22.6685 10.4353H20.2012C19.9325 11.2687 18.8403 11.7059 17.9912 11.7059C16.3502 11.7059 15.4925 10.7878 15.4925 9.22756H22.8371C22.8457 9.06635 22.8571 8.89694 22.8571 8.72479ZM15.4925 7.5389C15.5812 6.25736 16.476 5.45675 17.814 5.45675C19.2206 5.45675 19.9239 6.24644 20.0468 7.5389H15.4925Z"
-                    fill="black"
-                    fillOpacity="0.8"
-                  ></path>
-                </svg>
-              </a>
+  return (
+    <main id="top" className="min-h-dvh">
+      <header className="sticky top-0 z-40 border-b border-border bg-background">
+        <div className="grid grid-cols-[auto_1fr] items-stretch border-b border-border">
+          <a href="#top" className="display flex items-center border-r border-border px-3 text-2xl md:text-3xl">Carmen Puche</a>
+          <div className="grid grid-cols-[1fr_auto]">
+            <div className="grid grid-cols-[auto_1fr]">
+              <a href="mailto:carmenpuchemartinez@gmail.com" className="label flex items-center border-r border-border px-3 py-2 hover:bg-foreground hover:text-background">{es ? "Contacto" : "Contact"}</a>
+              <span className="label hidden items-center px-3 py-2 text-muted-foreground lg:flex">carmenpuchemartinez@gmail.com</span>
             </div>
-            <p className="correo text-[14px] md:text-[17px]">
-              cmpuche@hotmail.com
-            </p>
+            <div className="flex items-center justify-end border-l border-border px-2">
+              <button type="button" onClick={() => setLanguage("es")} aria-pressed={es} className={`label px-2 py-2 ${es ? "underline" : "text-muted-foreground"}`}>ESP</button>
+              <span className="label text-muted-foreground">|</span>
+              <button type="button" onClick={() => setLanguage("en")} aria-pressed={!es} className={`label px-2 py-2 ${!es ? "underline" : "text-muted-foreground"}`}>ENG</button>
+            </div>
           </div>
-        </section>
-      </main>
-    </ProjectLayout>
+        </div>
+        <div className="grid grid-cols-2">
+          <span className="label border-r border-border p-3 text-muted-foreground">{es ? "Madrid, España" : "Madrid, Spain"}</span>
+          <a href="#trabajos" className="label p-3 hover:bg-foreground hover:text-background">{es ? "Trabajos ↓" : "Work ↓"}</a>
+        </div>
+      </header>
+
+      <section id="trabajos" className="border-b border-border">
+        <Link href={`/projects/${featured.id}`} className="group block border-b border-border">
+          <div className="aspect-[16/9] overflow-hidden bg-secondary md:aspect-[2.2/1]">
+            <img src={featured.image} alt={`${featured.client} — ${featured.title}`} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.015]" />
+          </div>
+          <div className="grid grid-cols-[3rem_1fr_auto] border-t border-border md:grid-cols-[4rem_1fr_14rem_10rem_4rem]">
+            <span className="label border-r border-border p-3 text-muted-foreground">01</span>
+            <span className="p-3"><span className="label flex justify-between gap-3 text-muted-foreground"><span>{featured.client}</span><span className="md:hidden">{featured.year}</span></span><span className="display mt-1 block text-3xl md:text-5xl">{featured.title}</span></span>
+            <span className="label hidden items-center border-l border-border px-3 md:flex">{projectType(featured.type, es)}</span>
+            <span className="label hidden items-center border-l border-border px-3 md:flex">{featured.year}</span>
+            <span className="label flex items-center justify-center border-l border-border px-3">+</span>
+          </div>
+        </Link>
+        <div className="grid md:grid-cols-2">{tiles.map((project, index) => <ProjectTile key={project.id} project={project} index={index + 1} es={es} />)}</div>
+      </section>
+
+      <section className="border-b border-border">
+        <div className="flex items-baseline justify-between border-b border-border px-3 py-2">
+          <h2 className="label">{es ? "Archivo de escuela" : "School archive"}</h2>
+          <span className="label text-muted-foreground">2021—2024</span>
+        </div>
+        {archive.map((project, index) => (
+          <Link key={project.id} href={`/projects/${project.id}`} className="group relative block border-b border-border last:border-b-0">
+            <img src={project.image} alt="" aria-hidden="true" loading="lazy" className="pointer-events-none fixed top-1/2 left-[55%] z-50 hidden aspect-[4/3] w-80 -translate-y-1/2 object-cover opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 md:block" />
+            <div className="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr_14rem_10rem_4rem]">
+              <span className="label flex items-center border-r border-border px-3 py-4 text-muted-foreground">{String(index + 8).padStart(2, "0")}</span>
+              <span className="flex flex-col justify-center px-3 py-3"><span className="label text-muted-foreground">{project.client}</span><span className="display text-3xl md:text-5xl">{project.title}</span></span>
+              <span className="label hidden items-center border-l border-border px-3 md:flex">{projectType(project.type, es)}</span>
+              <span className="label hidden items-center border-l border-border px-3 md:flex">{project.year}</span>
+              <span className="label hidden items-center justify-center border-l border-border md:flex">[ + ]</span>
+            </div>
+          </Link>
+        ))}
+      </section>
+
+      <section className="grid border-b border-border md:grid-cols-[1fr_2fr]">
+        <h2 className="label border-b border-border p-3 md:border-r md:border-b-0">{es ? "Sobre mí" : "About"}</h2>
+        <div>
+          <p className="display border-b border-border p-3 text-4xl md:p-6 md:text-7xl">{es ? "Directora de arte en el Ruso de Rocky." : "Art director at el Ruso de Rocky."}</p>
+          <div className="grid md:grid-cols-3">
+            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Formación" : "Education"}</p><p className="text-sm leading-relaxed">{es ? "Máster en Creatividad Integral" : "Master’s in Integrated Creativity"}<br />[ Brother Madrid ]<br />{es ? "Máster en Diseño Gráfico y Entornos Digitales" : "Master’s in Graphic Design and Digital Environments"}<br />[ LABASAD ]<br />{es ? "Grado en Publicidad y RR. PP." : "Degree in Advertising and Public Relations"}<br />[ Universidad de Murcia ]</p></div>
+            <div className="border-b border-border p-3 md:border-r md:border-b-0 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Experiencia" : "Experience"}</p><p className="text-sm leading-relaxed">Portavoz<br />[ 2020–2023 ]<br />DAVID Madrid<br />[ 2024 ]<br />el Ruso de Rocky<br />[ {es ? "2025–Actualidad" : "2025–Present"} ]</p></div>
+            <div className="p-3 md:p-6"><p className="label mb-4 text-muted-foreground">{es ? "Marcas" : "Brands"}</p><p className="text-sm leading-relaxed">Burger King, Liga F, Goiko, Netflix, Real Valladolid CF, Universidad Europea, {es ? "entre otros" : "among others"}.</p></div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <a href="mailto:carmenpuchemartinez@gmail.com" className="display block overflow-hidden border-b border-border px-2 py-6 text-[clamp(1.35rem,6.7vw,7rem)] hover:bg-foreground hover:text-background">carmenpuchemartinez@gmail.com</a>
+        <div className="grid md:grid-cols-2"><span className="label border-b border-border p-3 md:border-r md:border-b-0">© {new Date().getFullYear()} Carmen Puche</span><a href="mailto:carmenpuchemartinez@gmail.com" className="label p-3 hover:bg-foreground hover:text-background">{es ? "Contacto →" : "Contact →"}</a></div>
+      </footer>
+    </main>
   );
 }
