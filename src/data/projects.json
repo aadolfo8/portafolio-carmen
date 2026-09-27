@@ -14,8 +14,14 @@
     "title": "Hungry Street View Drivers",
     "year": "2026",
     "type": "Digital campaign",
-    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0b3757251767413.6a3e699c45674.jpg",
-    "media": [{ "kind": "image", "src": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0b3757251767413.6a3e699c45674.jpg" }]
+    "image": "/BURGER_KING/1.webp",
+    "awards": ["4x Shortlist Cannes Lions [Print & Publishing]"],
+    "media": [
+      { "kind": "image", "src": "/BURGER_KING/1.webp" },
+      { "kind": "image", "src": "/BURGER_KING/2.jpg" },
+      { "kind": "image", "src": "/BURGER_KING/3.webp" },
+      { "kind": "image", "src": "/BURGER_KING/4.webp" }
+    ]
   },
   {
     "id": "universidad-europea",
@@ -32,8 +38,20 @@
     "title": "Smac & Cheese",
     "year": "2025",
     "type": "Branded product",
-    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/dddda1246402629.69c417f80714e.gif",
-    "media": [{ "kind": "image", "src": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/dddda1246402629.69c417f80714e.gif" }]
+    "image": "/GOIKO/PORTADA.png",
+    "awards": ["1x Shortlist Club de Creativos [Creadores de contenido]"],
+    "media": [
+      { "kind": "video", "src": "/GOIKO/1.mp4" },
+      { "kind": "image", "src": "/GOIKO/2.png" },
+      { "kind": "image", "src": "/GOIKO/3.png" },
+      { "kind": "video", "src": "/GOIKO/4.mp4" },
+      { "kind": "video", "src": "/GOIKO/5.mp4" },
+      { "kind": "image", "src": "/GOIKO/6.png" },
+      { "kind": "image", "src": "/GOIKO/7.png" },
+      { "kind": "video", "src": "/GOIKO/8.mp4" },
+      { "kind": "embed", "src": "https://player.vimeo.com/video/1168447664" },
+      { "kind": "image", "src": "/GOIKO/10.png" }
+    ]
   },
   {
     "id": "liga-f-que-viene",
@@ -42,6 +60,7 @@
     "year": "2025",
     "type": "Spot TV & RRSS",
     "image": "https://i.ytimg.com/vi/dAcFVJ1lJrs/maxresdefault.jpg",
+    "awards": ["1x Sol de Plata [Film]"],
     "media": [{ "kind": "embed", "src": "https://www.youtube-nocookie.com/embed/dAcFVJ1lJrs?rel=0" }]
   },
   {
@@ -51,6 +70,7 @@
     "year": "2024",
     "type": "Campaña",
     "image": "/VICIO.webp",
+    "awards": ["1x Oro Club de Creativos [Jóvenes Talentos]"],
     "media": [
       { "kind": "video", "src": "/VICIO/1.mp4" },
       { "kind": "embed", "src": "https://player.vimeo.com/video/934956545?h=02e8f4c91b&title=0&byline=0&portrait=0" },
@@ -64,11 +84,12 @@
   },
   {
     "id": "sin-nieve",
-    "client": "",
+    "client": "EFE:Verde",
     "title": "Sin nieve no hay sociedad",
     "year": "2024",
     "type": "Campaña",
     "image": "/SIN_NIEVE.webp",
+    "awards": ["1x Bronce El Ojo [Digital & Social]"],
     "media": [
       { "kind": "video", "src": "/NIEVE/1.mp4" },
       { "kind": "embed", "src": "https://player.vimeo.com/video/950819241?h=20cae1ccf9&title=0&byline=0&portrait=0" },
@@ -99,7 +120,7 @@
     "id": "spotify-vpn",
     "client": "Spotify",
     "title": "VPN Generator",
-    "year": "2023",
+    "year": "2024",
     "type": "Digital",
     "image": "/SPOTIFY.webp",
     "media": [
@@ -115,7 +136,7 @@
     "id": "zalando",
     "client": "Zalando",
     "title": "Dress they up",
-    "year": "2023",
+    "year": "2024",
     "type": "Campaña",
     "image": "/ZALANDO.webp",
     "media": [
@@ -130,7 +151,7 @@
     "id": "nike",
     "client": "Nike",
     "title": "Ellas",
-    "year": "2023",
+    "year": "2024",
     "type": "Spot & Gráfica",
     "image": "/NIKE.webp",
     "media": [
@@ -146,7 +167,7 @@
     "id": "audible",
     "client": "Audible",
     "title": "Hazlo más fácil",
-    "year": "2023",
+    "year": "2024",
     "type": "Gráfica",
     "image": "/AUDIBLE.webp",
     "media": [
@@ -163,7 +184,7 @@
     "id": "durex",
     "client": "Durex",
     "title": "XL",
-    "year": "2022",
+    "year": "2023",
     "type": "Gráfica",
     "image": "/DUREX.webp",
     "mediaLayout": "triptych",
@@ -177,7 +198,7 @@
     "id": "spotify-familiar",
     "client": "Spotify",
     "title": "Plan Familiar",
-    "year": "2022",
+    "year": "2023",
     "type": "Gráfica",
     "image": "/PLAN_FAMILIAR.webp",
     "media": [
@@ -191,7 +212,7 @@
     "id": "giffgaff",
     "client": "Giffgaff",
     "title": "Thief Shop",
-    "year": "2021",
+    "year": "2023",
     "type": "Campaña",
     "image": "/GIFFGAFF.webp",
     "media": [
@@ -206,7 +227,7 @@
     "id": "dgtxapple-familiar-voices",
     "client": "DGT x Apple",
     "title": "Familiar Voices",
-    "year": "—",
+    "year": "2023",
     "type": "Campaña",
     "image": "/FAMILIAR_VOICES.webp",
     "media": [
