@@ -131,7 +131,7 @@
     "client": "Nike",
     "title": "Ellas",
     "year": "2023",
-    "type": "Film",
+    "type": "Spot & Gráfica",
     "image": "/NIKE.webp",
     "media": [
       { "kind": "image", "src": "/NIKE/1.png" },
@@ -147,7 +147,7 @@
     "client": "Audible",
     "title": "Hazlo más fácil",
     "year": "2023",
-    "type": "Campaña",
+    "type": "Gráfica",
     "image": "/AUDIBLE.webp",
     "media": [
       { "kind": "video", "src": "/AUDIBLE/1.mp4" },
@@ -164,7 +164,7 @@
     "client": "Durex",
     "title": "XL",
     "year": "2022",
-    "type": "Campaña",
+    "type": "Gráfica",
     "image": "/DUREX.webp",
     "mediaLayout": "triptych",
     "media": [
@@ -178,7 +178,7 @@
     "client": "Spotify",
     "title": "Plan Familiar",
     "year": "2022",
-    "type": "Campaña",
+    "type": "Gráfica",
     "image": "/PLAN_FAMILIAR.webp",
     "media": [
       { "kind": "video", "src": "/PLAN_FAMILIAR/1.mp4" },
