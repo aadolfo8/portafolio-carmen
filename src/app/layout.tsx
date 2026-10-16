@@ -8,8 +8,21 @@ const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"], varia
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://carmenpuche.com"),
-  title: "Carmen Puche — Directora de Arte",
-  description: "Portfolio de Carmen Puche, directora de arte en Madrid.",
+  title: { default: "Carmen Puche — Directora de Arte en Madrid", template: "%s | Carmen Puche" },
+  description: "Portfolio de Carmen Puche, directora de arte en Madrid. Campañas, identidad visual y proyectos para marcas como Burger King, Liga F y Spotify.",
+  alternates: { canonical: "/", languages: { es: "/", en: "/en" } },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    alternateLocale: ["en_US"],
+    siteName: "Carmen Puche",
+    title: "Carmen Puche — Directora de Arte en Madrid",
+    description: "Portfolio de dirección de arte, campañas y proyectos creativos.",
+    url: "/",
+    images: [{ url: "/carmen-portrait.png", alt: "Carmen Puche, directora de arte" }],
+  },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   icons: { icon: "/favicon.png" },
 };
 

@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useLanguage } from "@/components/LanguageProvider";
+import { usePathname } from "next/navigation";
 
 export default function SiteHeader({ home = false }: { home?: boolean }) {
-  const { language, setLanguage } = useLanguage();
-  const es = language === "es";
+  const pathname = usePathname();
+  const es = pathname !== "/en";
   const role = home && !es ? "CREATIVE ART DIRECTOR" : "Directora de arte";
 
   return (
@@ -18,9 +18,9 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
         </div>
         {home ? (
           <div className="flex items-center justify-end border-l border-border px-1 sm:px-2">
-            <button type="button" onClick={() => setLanguage("es")} aria-pressed={es} className={`label px-1 py-2 sm:px-2 ${es ? "underline" : "text-muted-foreground"}`}>ESP</button>
+            <Link href="/" hrefLang="es" lang="es" aria-current={es ? "page" : undefined} className={`label px-1 py-2 sm:px-2 ${es ? "underline" : "text-muted-foreground"}`}>ESP</Link>
             <span className="label text-muted-foreground">|</span>
-            <button type="button" onClick={() => setLanguage("en")} aria-pressed={!es} className={`label px-1 py-2 sm:px-2 ${!es ? "underline" : "text-muted-foreground"}`}>ENG</button>
+            <Link href="/en" hrefLang="en" lang="en" aria-current={!es ? "page" : undefined} className={`label px-1 py-2 sm:px-2 ${!es ? "underline" : "text-muted-foreground"}`}>ENG</Link>
           </div>
         ) : (
           <Link href="/#trabajos" className="label flex items-center border-l border-border px-3 hover:bg-foreground hover:text-background">Cerrar ×</Link>
