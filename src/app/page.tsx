@@ -32,10 +32,23 @@ export default function Home() {
     <main id="top" className="min-h-dvh">
       <SiteHeader home />
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Carmen Puche",
+        jobTitle: "Directora de arte",
+        url: "https://carmenpuche.com/",
+        image: "https://carmenpuche.com/carmen-portrait.png",
+        email: "carmenpuchemartinez@gmail.com",
+        address: { "@type": "PostalAddress", addressLocality: "Madrid", addressCountry: "ES" },
+        sameAs: ["https://www.linkedin.com/in/carmen-puche", "https://www.instagram.com/carmenpuche_/"],
+        worksFor: { "@type": "Organization", name: "el Ruso de Rocky" },
+      }).replace(/</g, "\\u003c") }} />
+
       <section id="trabajos" className="border-b border-border">
         <Link href={`/projects/${featured.id}`} className="group block border-b border-border">
           <div className="aspect-[16/9] overflow-hidden bg-secondary md:aspect-[2.2/1]">
-            <img src={featured.image} alt={`${featured.client} — ${featured.title}`} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.015]" />
+            <img src={featured.image} alt={`${featured.client} — ${featured.title}`} fetchPriority="high" decoding="async" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.015]" />
           </div>
           <div className="grid grid-cols-[3rem_1fr_auto] border-t border-border md:grid-cols-[4rem_1fr_14rem_10rem_4rem]">
             <span className="label border-r border-border p-3 text-muted-foreground">01</span>
