@@ -43,3 +43,6 @@ next-env.d.ts
 # local code index
 .codegraph/
 .opencode/
+
+# python
+__pycache__/
